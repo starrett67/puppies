@@ -79,6 +79,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="channel.html" />
     <Content Include="Checkout.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
