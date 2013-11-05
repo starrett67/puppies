@@ -35,7 +35,7 @@
                         </div>
                             </div>
                         <div class="item">
-                        <img src=""https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScIJOQcBJn_OGO5hoNGO9uSIWlZtNRqMXq9b2BbHNbCnjIWTYtwg />
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScIJOQcBJn_OGO5hoNGO9uSIWlZtNRqMXq9b2BbHNbCnjIWTYtwg" />
                         <div class="carousel-caption">
                         <p>stuf here</p>
                         </div>
