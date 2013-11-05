@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h3>We Sell the best puppies!</h3>
-                <button class="btn btn-large" ><a href="Store.aspx">Click here to start Shopping</a></button><br />
+                <a href="Store.aspx"><button class="btn btn-large" >Click here to start Shopping</button></a><br />
                 <br />
                 
                 <div id="Carousel" class="carousel slide" style="width: 600px; margin: 0 auto">
