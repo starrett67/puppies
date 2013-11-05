@@ -82,12 +82,12 @@
                 <table style="text-align:right">
                     <tr>
                         <td>
-                            <table style="margin: 20px;">
+                            <table>
                                 <tr>
                                     <td>
                                         First Name:
                                     </td>
-                                    <td>
+                                    <td style="margin-left: 20px>
                                         <input id="fName" type="text" />
                                     </td>
                                 </tr>
@@ -95,7 +95,7 @@
                                     <td>
                                         Last Name:
                                     </td>
-                                    <td>
+                                    <td style="margin-left: 20px>
                                         <input id="lName" type="text" />
                                     </td>
                                 </tr>
@@ -103,7 +103,7 @@
                                     <td>
                                         UserName:
                                     </td>
-                                    <td>
+                                    <td style="margin-left: 20px>
                                         <input id="UserName" type="text" />
                                     </td>
                                 </tr>
@@ -111,7 +111,7 @@
                                     <td>
                                         Email:
                                     </td>
-                                    <td>
+                                    <td style="margin-left: 20px>
                                         <input id="Email" type="text" />
                                     </td>
                                 </tr>
