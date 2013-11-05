@@ -64,8 +64,8 @@
             document.getElementById("fName").value = response.first_name;
             document.getElementById("lName").value = response.last_name;
             document.getElementById("Age").value = response.username;
-            document.getElementById("PhoneNumber").value = response.phonenumber;
-            document.getElementById("Email").value = response.location.name;
+            document.getElementById("PhoneNumber").value = response.location.name;
+            document.getElementById("Email").value = response.email;
 
         });
     }
