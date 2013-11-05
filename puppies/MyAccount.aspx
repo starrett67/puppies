@@ -78,7 +78,7 @@
         <div class="container">
         <div class="row" style="height: 60px;"></div>
         <div class="row">
-            <div class="col-lg-3">
+            <div class="col-lg-3 well">
                 <table>
                     <tr>
                         <td>
