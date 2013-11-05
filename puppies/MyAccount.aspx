@@ -87,7 +87,7 @@
                                     <td>
                                         First Name:
                                     </td>
-                                    <td style="margin-left: 20px>
+                                    <td style="margin-left: 20px;">
                                         <input id="fName" type="text" />
                                     </td>
                                 </tr>
@@ -95,7 +95,7 @@
                                     <td>
                                         Last Name:
                                     </td>
-                                    <td style="margin-left: 20px>
+                                    <td style="margin-left: 20px;">
                                         <input id="lName" type="text" />
                                     </td>
                                 </tr>
@@ -103,7 +103,7 @@
                                     <td>
                                         UserName:
                                     </td>
-                                    <td style="margin-left: 20px>
+                                    <td style="margin-left: 20px;">
                                         <input id="UserName" type="text" />
                                     </td>
                                 </tr>
@@ -111,7 +111,7 @@
                                     <td>
                                         Email:
                                     </td>
-                                    <td style="margin-left: 20px>
+                                    <td style="margin-left: 20px;">
                                         <input id="Email" type="text" />
                                     </td>
                                 </tr>
@@ -119,7 +119,7 @@
                                     <td>
                                         Location:
                                     </td>
-                                    <td>
+                                    <td style="margin-left: 20px;">
                                         <input id="Location" type="text" />
                                     </td>
                                 </tr>
