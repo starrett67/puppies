@@ -14,7 +14,7 @@
                 <h3>We Sell the best puppies!</h3>
                 <center><button class="btn btn-large btn-primary" ><a href="Store.aspx">Click here to start Shopping</a></button><br /></center>
                 
-                <div id="Carousel" class="carousel slide">
+                <div id="Carousel" class="carousel slide" style="width: 600px; margin: 0 auto">
                     <ol class="carousel-indicators">
                         <li data-target="#Carousel" data-slide-to="0" class="active"></li>
                         <li data-target="#Carousel" data-slide-to="1"></li>
@@ -42,8 +42,8 @@
                            </div>
                     </div>
                     <!-- Carousel nav -->
-                    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-                    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+                    <a class="carousel-control left" href="#Carousel" data-slide="prev">&lsaquo;</a>
+                    <a class="carousel-control right" href="#Carousel" data-slide="next">&rsaquo;</a>
                 </div>
                 
             </div>
