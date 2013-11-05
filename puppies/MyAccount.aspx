@@ -77,8 +77,7 @@
                 First Name:
             </td>
             <td>
-                <asp:RequiredFieldValidator ID="RequreFName" runat="server" ErrorMessage="RequiredFieldValidator">
-                <input id="fName" type="text" /></asp:RequiredFieldValidator>
+                <input id="fName" type="text" />
             </td>
         </tr>
         <tr>
@@ -86,8 +85,7 @@
                 Last Name:
             </td>
             <td>
-                <asp:RequiredFieldValidator ID="RequireLName" runat="server" ErrorMessage="RequiredFieldValidator">
-                <input id="lName" type="text" /></asp:RequiredFieldValidator>
+                <input id="lName" type="text" />
             </td>
         </tr>
         <tr>
@@ -95,8 +93,7 @@
                 Age:
             </td>
             <td>
-                <asp:RequiredFieldValidator ID="RequireAge" runat="server" ErrorMessage="RequiredFieldValidator">
-                <input id="Age" type="text" /></asp:RequiredFieldValidator>
+                <input id="Age" type="text" />
             </td>
         </tr>
         <tr>
@@ -104,8 +101,7 @@
                 Email:
             </td>
             <td>
-                <asp:RequiredFieldValidator ID="RequireEmail" runat="server" ErrorMessage="RequiredFieldValidator">
-                <input id="Email" type="text" /></asp:RequiredFieldValidator>
+                <input id="Email" type="text" />
             </td>
         </tr>
         <tr>
