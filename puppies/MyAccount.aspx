@@ -59,6 +59,7 @@
         console.log('Welcome!  Fetching your information.... ');
         FB.api('/me', function (response) {
             console.log('Good to see you, ' + response.name + '.');
+            var resp = response;
             var name = response.name;
             var firstandlast = name.split(" ");
             document.getElementById("fName").value = firstandlast[0];
