@@ -3,55 +3,79 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="PuppyContent" runat="server">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h1>
-                    Welcome to puppiesrus!</h1>
-            </div>
+
+      <div class="jumbotron hero-spacer">
+        <h1>A Warm Welcome!</h1>
+        <p>Introduce your website content using this jumbotron! It's an awesome way to call attention to something that needs to be read! It's also a great alternative to using a banner image if you don't have a good quality picture!</p>
+        <p><a class="btn btn-primary btn-large">Call to action!</a></p>
+      </div>
+      
+      <hr>
+      
+      <div class="row">
+        <div class="col-lg-12">
+           <h3>Latest Features</h3>
         </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <h3>We Sell the best puppies!</h3>
-                <a class="btn btn-large" href="Store.aspx">Click here to start Shopping</a>
-                <br />
-                <br />
-                
-                <div id="Carousel" class="carousel slide" style="width: 600px; margin: 0 auto">
-                    <ol class="carousel-indicators">
-                        <li data-target="#Carousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#Carousel" data-slide-to="1"></li>
-                        <li data-target="#Carousel" data-slide-to="2"></li>
-                    </ol>
-                    <!-- Carousel items -->
-                    <div class="carousel-inner">
-                        <div class="active item">
-                            <img src="http://howtopottytrainapuppydog.net/wp-content/uploads/2012/02/puppy-vinegar-water-training.jpg" />
-                            <div class="carousel-caption">
-                                <p>
-                                    stuff heres s</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="http://www.wired.com/images_blogs/photos/uncategorized/2008/03/04/puppy.jpg" />
-                            <div class="carousel-caption">
-                                <p>
-                                    stuff</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScIJOQcBJn_OGO5hoNGO9uSIWlZtNRqMXq9b2BbHNbCnjIWTYtwg" />
-                            <div class="carousel-caption">
-                                <p>
-                                    stuf here</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Carousel nav -->
-                    <a class="carousel-control left" href="#Carousel" data-slide="prev">&lsaquo;</a>
-                    <a class="carousel-control right" href="#Carousel" data-slide="next">&rsaquo;</a>
-                </div>
-                
+      </div><!-- /.row -->
+      
+      <div class="row text-center">
+
+        <div class="col-lg-3 col-md-6 hero-feature">
+          <div class="thumbnail">
+            <img src="http://placehold.it/800x500" alt="">
+            <div class="caption">
+              <h3>Feature Label</h3>
+              <p>This would be a great spot to feature some brand new products!</p>
+              <p><a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a></p>
             </div>
+          </div>
         </div>
-    </div>
+
+        <div class="col-lg-3 col-md-6 hero-feature">
+          <div class="thumbnail">
+            <img src="http://placehold.it/800x500" alt="">
+            <div class="caption">
+              <h3>Feature Label</h3>
+              <p>This would be a great spot to feature some brand new products!</p>
+              <p><a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 hero-feature">
+          <div class="thumbnail">
+            <img src="http://placehold.it/800x500" alt="">
+            <div class="caption">
+              <h3>Feature Label</h3>
+              <p>This would be a great spot to feature some brand new products!</p>
+              <p><a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 hero-feature">
+          <div class="thumbnail">
+            <img src="http://placehold.it/800x500" alt="">
+            <div class="caption">
+              <h3>Feature Label</h3>
+              <p>This would be a great spot to feature some brand new products!</p>
+              <p><a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a></p>
+            </div>
+          </div>
+        </div>
+
+
+      </div><!-- /.row -->
+      
+      <hr>
+
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">
+            <p>Copyright &copy; Company 2013 &middot; Facebook &middot; Twitter &middot; Google+</p>
+          </div>
+        </div>
+      </footer>
+      
+    </div><!-- /.container -->
 </asp:Content>
