@@ -72,6 +72,7 @@
 </script>
     
     
+        <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <table>
@@ -121,6 +122,7 @@
     </p>
     </font>
             </div>
+        </div>
         </div>
     
 </asp:Content>
