@@ -82,7 +82,7 @@
         <div class="row" style="height: 60px;">
         </div>
         <div class="row" id="logoutfield">
-            <fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
+            <fb:login-button show-faces="true" autologoutlink="true" scope="email" width="200" max-rows="1"></fb:login-button>
         </div>
     </div>
               
