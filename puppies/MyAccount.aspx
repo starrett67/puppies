@@ -135,26 +135,26 @@
                     Your Orders:</h2>
                 <tabel class="table table-striped">
                    <tr>
-                    <td class="field-label col-xs-3 active">
+                    <td >
                       <label>Field 1:</label>
                     </td>
-                    <td class="col-md-9">
+                    <td >
                       Value 1
                     </td>
                   </tr>
                   <tr>
-                    <td class="field-label col-xs-3 active">
+                    <td >
                       <label>Field 2:</label>
                     </td>
-                    <td class="col-md-9">
+                    <td >
                       Value 2
                     </td>
                   </tr>
                   <tr>
-                    <td class="field-label col-xs-3 active">
+                    <td>
                       <label>Field 3:</label>
                     </td>
-                    <td class="col-md-9">
+                    <td >
                       Value 3
                     </td>
                   </tr>
