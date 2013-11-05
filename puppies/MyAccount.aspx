@@ -134,14 +134,17 @@
                 <h2>
                     Your Orders:</h2>
                <table class="table table-striped"> 
+                  <thead>
                   <tr>
-                    <td class="field-label col-xs-3 active">
+                    <th class="field-label col-xs-3 active">
                       <label>Order #</label>
-                    </td>
-                    <td class="col-md-9">
+                    </th>
+                    <th class="col-md-9">
                      <label>Order Details</label>
-                    </td>
+                    </th>
                   </tr>
+                  </thead>
+                  <tbody>
                   <tr>
                     <td class="field-label col-xs-3 active">
                       <label>Order 1:</label>
@@ -166,6 +169,7 @@
                       Value 3
                     </td>
                   </tr>
+                  </tbody>
                </table>
             </div>
         
