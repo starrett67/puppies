@@ -73,12 +73,11 @@
         });
     }
 </script>
-    
-    
-        <div class="container">
-        <div class="row" style="height: 60px;"></div>
+    <div class="container">
+        <div class="row" style="height: 60px;">
+        </div>
         <div class="row">
-            <div style="margin:10px;" class="col-lg-3 well">
+            <div style="margin: 10px;" class="col-lg-3 well">
                 <table>
                     <tr>
                         <td>
@@ -122,14 +121,47 @@
                     </tr>
                 </table>
                 <font color="red">
-    <p id="ErrorMessage">
-    </p>
-    </font>
+                    <p id="ErrorMessage">
+                    </p>
+                </font>
             </div>
-            <div style="margin:10px;" id="profile-pic" class="col-lg-3 well">
-            
+            <div style="margin: 10px;" id="profile-pic" class="col-lg-3 well">
             </div>
         </div>
+        <hr />
+        <div class="row">
+            <div style="margin: 10px;" class="col-lg-12 well">
+                <h2>
+                    Your Orders:</h2>
+                <tabel class="table table-striped">
+                   <tr>
+                    <td class="field-label col-xs-3 active">
+                      <label>Field 1:</label>
+                    </td>
+                    <td class="col-md-9">
+                      Value 1
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="field-label col-xs-3 active">
+                      <label>Field 2:</label>
+                    </td>
+                    <td class="col-md-9">
+                      Value 2
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="field-label col-xs-3 active">
+                      <label>Field 3:</label>
+                    </td>
+                    <td class="col-md-9">
+                      Value 3
+                    </td>
+                  </tr>
+            </tabel>
+            </div>
+        
         </div>
+    </div>
     
 </asp:Content>
