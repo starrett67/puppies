@@ -24,7 +24,7 @@
                     <!-- Carousel items -->
                     <div class="carousel-inner">
                         <div class="active item">
-                        <img src="http://howtopottytrainapuppydog.net/wp-content/uploads/2012/02/puppy-vinegar-water-training.jpg" />
+                        <!--<img src="http://howtopottytrainapuppydog.net/wp-content/uploads/2012/02/puppy-vinegar-water-training.jpg" />-->
                         <div class="carousel-caption">
                         <p>stuff heres s</p>
                         </div>
