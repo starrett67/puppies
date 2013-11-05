@@ -57,10 +57,10 @@
 
         <div class="col-lg-3 col-md-6 hero-feature">
           <div class="thumbnail">
-            <img src="http://placehold.it/800x500" alt="">
+            <img src="http://farm1.staticflickr.com/128/410071337_3a38fecae3_z.jpg?zz=1" alt="">
             <div class="caption">
-              <h3>Feature Label</h3>
-              <p>This would be a great spot to feature some brand new products!</p>
+              <h3>Lassie</h3>
+              <p>This would be a great dog to help the fight in WW1!</p>
               <p><a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a></p>
             </div>
           </div>
