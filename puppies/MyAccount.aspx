@@ -100,7 +100,7 @@
                 Email:
             </td>
             <td>
-                <input id="Location" type="text" />
+                <input id="Email" type="text" />
             </td>
         </tr>
         <tr>
@@ -108,7 +108,7 @@
                 Location:
             </td>
             <td>
-                <input id="Phone Number" type="text" />
+                <input id="Location" type="text" />
             </td>
         </tr>
     </table>
