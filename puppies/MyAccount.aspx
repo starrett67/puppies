@@ -133,10 +133,18 @@
             <div style="margin: 10px;" class="col-lg-12 well">
                 <h2>
                     Your Orders:</h2>
-               <table class="table table-bordered"> 
+               <table class="table table-striped"> 
                   <tr>
                     <td class="field-label col-xs-3 active">
-                      <label>Field 1:</label>
+                      <label>Order #</label>
+                    </td>
+                    <td class="col-md-9">
+                     <label>Order Details</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="field-label col-xs-3 active">
+                      <label>Order 1:</label>
                     </td>
                     <td class="col-md-9">
                       Value 1
@@ -144,7 +152,7 @@
                   </tr>
                   <tr>
                     <td class="field-label col-xs-3 active">
-                      <label>Field 2:</label>
+                      <label>Order 2:</label>
                     </td>
                     <td class="col-md-9">
                       Value 2
@@ -152,7 +160,7 @@
                   </tr>
                   <tr>
                     <td class="field-label col-xs-3 active">
-                      <label>Field 3:</label>
+                      <label>Order 3:</label>
                     </td>
                     <td class="col-md-9">
                       Value 3
