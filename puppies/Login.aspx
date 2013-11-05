@@ -59,6 +59,10 @@
         FB.api('/me', function (response) {
             console.log('Good to see you, ' + response.name + '.');
         });
+        document.getElementById("logoutfield").innerHTML += "<input type="button" id="logoutbutton" value="Logout" onclick="logout" />"
+    }
+    function logout(){
+        FB.logout(function (respons){ });
     }
 </script>
 
@@ -68,12 +72,14 @@
 
   Learn more about options for the login button plugin:
   /docs/reference/plugins/login/ -->
-  <div class="container">
+    <div class="container">
         <div class="row" style="height: 60px;">
         </div>
         <div class="row">
-              <fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
-              </div>
-              </div>
+            <fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
+        </div>
+        <div id="logoutfield">
+        </div> 
+    </div>
               
 </asp:Content>
