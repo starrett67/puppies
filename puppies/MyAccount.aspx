@@ -64,9 +64,9 @@
             var firstandlast = name.split(" ");
             document.getElementById("fName").value = firstandlast[0];
             document.getElementById("lName").value = firstandlast[1];
-            document.getElementById("Age").value = response.age;
-            document.getElementById("PhoneNumber").value = response.phonenumber;
-            document.getElementById("Email").value = response.email;
+            //document.getElementById("Age").value = response.age;
+            //document.getElementById("PhoneNumber").value = response.phonenumber;
+            //document.getElementById("Email").value = response.email;
 
         });
     }
