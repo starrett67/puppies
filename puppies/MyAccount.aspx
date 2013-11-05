@@ -67,7 +67,8 @@
             document.getElementById("Location").value = response.location.name;
             document.getElementById("Email").value = response.email;
             var pic_url = "https://graph.facebook.com/" + response.username + "picture";
-            document.getElementById("profile-pic").innerHTML = '<img src="' +pic_url+ '"/>';
+            console.log(pic_url);
+            document.getElementById("profile-pic").innerHTML = '<img src="' + pic_url + '"/>';
 
         });
     }
