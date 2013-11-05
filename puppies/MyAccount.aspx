@@ -100,7 +100,7 @@
                 Email:
             </td>
             <td>
-                <input id="Loaction" type="text" />
+                <input id="Loction" type="text" />
             </td>
         </tr>
         <tr>
