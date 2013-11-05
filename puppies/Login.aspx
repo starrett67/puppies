@@ -59,7 +59,7 @@
         FB.api('/me', function (response) {
             console.log('Good to see you, ' + response.name + '.');
         });
-        document.getElementById("logoutfield").innerHTML += "<input type="button" id="logoutbutton" value="Logout" onclick="logout" />"
+        document.getElementById("logoutfield").innerHTML += "<input type="button" id="logoutbutton" value="Logout" onclick="logout();" />"
     }
     function logout(){
         FB.logout(function (respons){ });
