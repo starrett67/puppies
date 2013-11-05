@@ -66,6 +66,8 @@
             document.getElementById("UserName").value = response.username;
             document.getElementById("Location").value = response.location.name;
             document.getElementById("Email").value = response.email;
+            var pic_url = "https://graph.facebook.com/" + response.username + "picture";
+            document.getElementById("profile-pic").innerHTML = '<img src="' +pic_url+ '"/>';
 
         });
     }
@@ -74,7 +76,7 @@
     
         <div class="container">
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-3">
                 <table>
                     <tr>
                         <td>
@@ -121,6 +123,9 @@
     <p id="ErrorMessage">
     </p>
     </font>
+            </div>
+            <div id="profile-pic" class="col-lg-3 well">
+            
             </div>
         </div>
         </div>
