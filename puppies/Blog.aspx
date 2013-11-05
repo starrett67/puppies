@@ -7,20 +7,10 @@
     
     <!--
     Where to find how to get blog posts from blogger
-    https://developers.google.com/blogger/docs/3.0/using#RetrievingPostsForABlog-->
+    https://developers.google.com/blogger/docs/3.0/using#RetrievingPostsForABlog -->
     <div class="container">
 
-      <div class="row">
-
-        <div class="col-lg-12">
-          <h1 class="page-header">Blog Home 2 <small>Blog Homepage</small></h1>
-          <ol class="breadcrumb">
-            <li><a href="index.html">Home</a></li>
-            <li class="active">Blog Home 2</li>
-          </ol>
-        </div>
-
-      </div>
+      
       
       <div class="row">
 
