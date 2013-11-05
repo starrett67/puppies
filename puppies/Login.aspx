@@ -68,6 +68,12 @@
 
   Learn more about options for the login button plugin:
   /docs/reference/plugins/login/ -->
-
-<fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
+  <div class="container">
+        <div class="row" style="height: 60px;">
+        </div>
+        <div class="row">
+              <fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
+              </div>
+              </div>
+              
 </asp:Content>
