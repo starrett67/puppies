@@ -46,7 +46,7 @@
             });
         };
         console.log(document.getElementById("fName"));
-        if (document.getElementById("fName").value == "") {
+        if (document.getElementById("fName").value == null) {
             document.getElementById("AccountContainer").innerHTML = "<font color='red'><h2>Please login first</h2></font>";
         }
         // Load the SDK asynchronously
