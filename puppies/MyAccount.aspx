@@ -60,14 +60,12 @@
         FB.api('/me', function (response) {
             console.log('Good to see you, ' + response.name + '.');
             var resp = response;
-            var name = response.name;
-            var firstandlast = name.split(" ");
             console.log(resp)
-            document.getElementById("fName").value = firstandlast[0];
-            document.getElementById("lName").value = firstandlast[1];
-            //document.getElementById("Age").value = response.age;
-            //document.getElementById("PhoneNumber").value = response.phonenumber;
-            //document.getElementById("Email").value = response.email;
+            document.getElementById("fName").value = response.first_name;
+            document.getElementById("lName").value = response.last_name;
+            document.getElementById("Age").value = response.username;
+            document.getElementById("PhoneNumber").value = response.phonenumber;
+            document.getElementById("Email").value = response.location.name;
 
         });
     }
@@ -91,10 +89,10 @@
         </tr>
         <tr>
             <td>
-                Age:
+                UserName:
             </td>
             <td>
-                <input id="Age" type="text" />
+                <input id="UserName" type="text" />
             </td>
         </tr>
         <tr>
@@ -102,12 +100,12 @@
                 Email:
             </td>
             <td>
-                <input id="Email" type="text" />
+                <input id="Loaction" type="text" />
             </td>
         </tr>
         <tr>
             <td>
-                Phone Number:
+                Location:
             </td>
             <td>
                 <input id="Phone Number" type="text" />
