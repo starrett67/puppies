@@ -13,8 +13,7 @@
             <div class="col-lg-12">
                 <h3>We Sell the best puppies!</h3>
                 <center><button class="btn btn-large btn-primary" ><a href="Store.aspx">Click here to start Shopping</a></button><br /></center>
-                <center><img  style="max-width:100%" src="http://1.bp.blogspot.com/__82348puvBM/TACA7PXeDNI/AAAAAAAAAB4/DnVPw_0wnjw/s1600/golden-retriever-puppies.jpg" /></center>
-                <br>
+                
                 <div id="Carousel" class="carousel slide">
                     <ol class="carousel-indicators">
                         <li data-target="#Carousel" data-slide-to="0" class="active"></li>
@@ -24,7 +23,7 @@
                     <!-- Carousel items -->
                     <div class="carousel-inner">
                         <div class="active item">
-                        <!--<img src="http://howtopottytrainapuppydog.net/wp-content/uploads/2012/02/puppy-vinegar-water-training.jpg" />-->
+                        <img src="http://howtopottytrainapuppydog.net/wp-content/uploads/2012/02/puppy-vinegar-water-training.jpg" />
                         <div class="carousel-caption">
                         <p>stuff heres s</p>
                         </div>
