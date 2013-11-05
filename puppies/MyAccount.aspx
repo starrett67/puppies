@@ -77,7 +77,7 @@
         <div class="row" style="height: 60px;">
         </div>
         <div class="row">
-            <div style="margin: 10px;" class="col-lg-3 well">
+            <div style="margin: 10px;" class="col-lg-3">
                 <table>
                     <tr>
                         <td>
@@ -125,7 +125,7 @@
                     </p>
                 </font>
             </div>
-            <div style="margin: 10px;" id="profile-pic" class="col-lg-3 well">
+            <div style="margin: 10px;" id="profile-pic" class="col-lg-3">
             </div>
         </div>
         <hr />
