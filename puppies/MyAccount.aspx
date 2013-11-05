@@ -79,7 +79,7 @@
         </div>
         <div class="row">
             <div style="margin: 10px;" class="col-lg-3">
-                <table>
+                <table style="text-align:right">
                     <tr>
                         <td>
                             <table>

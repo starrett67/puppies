@@ -75,11 +75,9 @@
     <div class="container">
         <div class="row" style="height: 60px;">
         </div>
-        <div class="row">
+        <div class="row" id="logoutfield">
             <fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
         </div>
-        <div id="logoutfield">
-        </div> 
     </div>
               
 </asp:Content>
