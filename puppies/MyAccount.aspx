@@ -133,14 +133,11 @@
             <div style="margin: 10px;" class="col-lg-12 well">
                 <h2>
                     Your Orders:</h2>
-                <tabel class="table table-striped">
+                <table class="table table-striped">
                    <tr>
-                    <td >
-                      <label>Field 1:</label>
-                    </td>
-                    <td >
-                      Value 1
-                    </td>
+                    <td ><label>Field 1:</label></td>
+                    
+                    <td > Value 1</td>
                   </tr>
                   <tr>
                     <td >
@@ -158,7 +155,7 @@
                       Value 3
                     </td>
                   </tr>
-            </tabel>
+            </table>
             </div>
         
         </div>
