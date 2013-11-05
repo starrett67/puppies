@@ -82,7 +82,7 @@
                 <table style="text-align:right">
                     <tr>
                         <td>
-                            <table>
+                            <table style="margin: 20px;">
                                 <tr>
                                     <td>
                                         First Name:
