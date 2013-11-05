@@ -62,7 +62,7 @@
         document.getElementById("logoutfield").innerHTML += "<input type='button' id='logoutbutton' value='Logout' onclick='logout();' />"
     }
     function logout(){
-        FB.logout(function (respons){ });
+        FB.logout(function () { document.location.reload(); });
     }
 </script>
 
