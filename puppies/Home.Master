@@ -67,7 +67,7 @@
         FB.api('/me', function (response) {
             console.log('Good to see you, ' + response.name + '.');
         });
-        document.getElementById("FBContainer").innerHTML += "<a href='javascript:logout();'>Logout</a>"
+        document.getElementById("FBContainer-logout").innerHTML += "<a href='javascript:logout();'>Logout</a>"
     }
     function logout() {
         FB.logout(function () { document.location.reload(); });
@@ -95,6 +95,8 @@
                 </ul>
             </div>
             <div id="FBContainer">
+                <div id=FBContainter-logout">
+                </div>
                 <fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
             </div>
             <!-- /.navbar-collapse -->
