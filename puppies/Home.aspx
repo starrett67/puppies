@@ -24,10 +24,10 @@
 
         <div class="col-lg-3 col-md-6 hero-feature">
           <div class="thumbnail">
-            <img src="http://placehold.it/800x500" alt="">
+            <img src="http://farm5.staticflickr.com/4081/4883281674_8428f07e53_z.jpg" alt="">
             <div class="caption">
-              <h3>Feature Label</h3>
-              <p>This would be a great spot to feature some brand new products!</p>
+              <h3>Brown Puppy</h3>
+              <p>This would be a great dog to have!</p>
               <p><a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a></p>
             </div>
           </div>
@@ -35,10 +35,10 @@
 
         <div class="col-lg-3 col-md-6 hero-feature">
           <div class="thumbnail">
-            <img src="http://placehold.it/800x500" alt="">
+            <img src="http://farm4.staticflickr.com/3465/3717404335_90ed081ca8_z.jpg" alt="">
             <div class="caption">
-              <h3>Feature Label</h3>
-              <p>This would be a great spot to feature some brand new products!</p>
+              <h3>Harry Puppie</h3>
+              <p>This would be a great dog that will shed everywhere! LOL JK</p>
               <p><a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a></p>
             </div>
           </div>
@@ -46,10 +46,10 @@
 
         <div class="col-lg-3 col-md-6 hero-feature">
           <div class="thumbnail">
-            <img src="http://placehold.it/800x500" alt="">
+            <img src="http://farm4.staticflickr.com/3225/5774362254_3bda643abb_z.jpg" alt="">
             <div class="caption">
-              <h3>Feature Label</h3>
-              <p>This would be a great spot to feature some brand new products!</p>
+              <h3>Sitting Dog</h3>
+              <p>This would be a great Dog to play with!</p>
               <p><a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a></p>
             </div>
           </div>
