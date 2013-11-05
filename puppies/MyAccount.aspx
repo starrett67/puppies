@@ -62,6 +62,7 @@
             var resp = response;
             var name = response.name;
             var firstandlast = name.split(" ");
+            console.log(resp)
             document.getElementById("fName").value = firstandlast[0];
             document.getElementById("lName").value = firstandlast[1];
             //document.getElementById("Age").value = response.age;
