@@ -143,7 +143,7 @@
                      <label>Order Details</label>
                     </th>
                     <th class="col-md-1">
-                      $20
+                      Amount
                     </th>
                   </tr>
                   </thead>
