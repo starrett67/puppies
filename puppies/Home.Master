@@ -22,7 +22,7 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul id="menu">
+                <ul class="nav navbar-nav" id="menu">
                     <li><a href="Home.aspx">Home</a></li>
                     <li><a href="MyAccount.aspx">My Account</a></li>
                     <li><a href="Store.aspx">Store</a></li>
