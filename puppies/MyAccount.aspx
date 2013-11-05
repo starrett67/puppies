@@ -64,8 +64,8 @@
             document.getElementById("fName").value = response.first_name;
             document.getElementById("lName").value = response.last_name;
             document.getElementById("UserName").value = response.username;
-            //document.getElementById("Location").value = response.location.name;
-            //document.getElementById("Email").value = response.email;
+            document.getElementById("Location").value = response.location.name;
+            document.getElementById("Email").value = response.email;
             var pic_url = "https://graph.facebook.com/" + response.username + "/picture?type=large";
             console.log(pic_url);
             document.getElementById("profile-pic").innerHTML = '<center><img src="' + pic_url + '"/></center>';
@@ -79,53 +79,62 @@
         <div class="row">
             <div style="margin: 10px;" class="col-lg-3">
                 <table>
-                    <tr>
-                        <td>
-                            First Name:
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    First Name:
+                                </td>
+                                <td>
+                                    <input id="fName" type="text" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Last Name:
+                                </td>
+                                <td>
+                                    <input id="lName" type="text" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    UserName:
+                                </td>
+                                <td>
+                                    <input id="UserName" type="text" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Email:
+                                </td>
+                                <td>
+                                    <input id="Email" type="text" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Location:
+                                </td>
+                                <td>
+                                    <input id="Location" type="text" />
+                                </td>
+                            </tr>
+                        </table>
                         </td>
                         <td>
-                            <input id="fName" type="text" />
+                            <div style="margin: 10px;" id="profile-pic" class="col-lg-3">
+                            </div>
                         </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Last Name:
-                        </td>
-                        <td>
-                            <input id="lName" type="text" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            UserName:
-                        </td>
-                        <td>
-                            <input id="UserName" type="text" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Email:
-                        </td>
-                        <td>
-                            <input id="Email" type="text" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Location:
-                        </td>
-                        <td>
-                            <input id="Location" type="text" />
-                        </td>
-                    </tr>
+                </tr>
                 </table>
+
                 <font color="red">
                     <p id="ErrorMessage">
                     </p>
                 </font>
-            </div>
-            <div style="margin: 10px;" id="profile-pic" class="col-lg-3">
             </div>
         </div>
         <hr />
