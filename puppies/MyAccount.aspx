@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" Inherits="System.Web.Mvc.ViewPage" %>
+﻿ <%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" Inherits="System.Web.Mvc.ViewPage" %>
 <%@ Import Namespace="System.IO" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -70,50 +70,57 @@
         });
     }
 </script>
-    <table>
-        <tr>
-            <td>
-                First Name:
-            </td>
-            <td>
-                <input id="fName" type="text" />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Last Name:
-            </td>
-            <td>
-                <input id="lName" type="text" />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                UserName:
-            </td>
-            <td>
-                <input id="UserName" type="text" />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Email:
-            </td>
-            <td>
-                <input id="Email" type="text" />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Location:
-            </td>
-            <td>
-                <input id="Location" type="text" />
-            </td>
-        </tr>
-    </table>
-    <font color="red">
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <table>
+                    <tr>
+                        <td>
+                            First Name:
+                        </td>
+                        <td>
+                            <input id="fName" type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Last Name:
+                        </td>
+                        <td>
+                            <input id="lName" type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            UserName:
+                        </td>
+                        <td>
+                            <input id="UserName" type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Email:
+                        </td>
+                        <td>
+                            <input id="Email" type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Location:
+                        </td>
+                        <td>
+                            <input id="Location" type="text" />
+                        </td>
+                    </tr>
+                </table>
+                <font color="red">
     <p id="ErrorMessage">
     </p>
     </font>
+            </div>
+        </div>
+    </div>
 </asp:Content>
