@@ -66,7 +66,7 @@
             document.getElementById("UserName").value = response.username;
             //document.getElementById("Location").value = response.location.name;
             //document.getElementById("Email").value = response.email;
-            var pic_url = "https://graph.facebook.com/" + response.username + "/picture";
+            var pic_url = "https://graph.facebook.com/" + response.username + "/picture?type=large";
             console.log(pic_url);
             document.getElementById("profile-pic").innerHTML = '<img src="' + pic_url + '"/>';
 
