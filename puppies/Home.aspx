@@ -3,6 +3,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="PuppyContent" runat="server">
     <div class="container">
+     <div class="row" style="height: 60px;">
+        </div>
      <div class="row">
 
       <div class="jumbotron hero-spacer">
@@ -16,7 +18,7 @@
       
       <div class="row">
         <div class="col-lg-12">
-           <h3>Latest Features</h3>
+           <h3>Popular Dogs</h3>
         </div>
       </div><!-- /.row -->
       
