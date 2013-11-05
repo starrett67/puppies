@@ -63,8 +63,8 @@
             console.log(resp)
             document.getElementById("fName").value = response.first_name;
             document.getElementById("lName").value = response.last_name;
-            document.getElementById("Age").value = response.username;
-            document.getElementById("PhoneNumber").value = response.location.name;
+            document.getElementById("UserName").value = response.username;
+            document.getElementById("Location").value = response.location.name;
             document.getElementById("Email").value = response.email;
 
         });
