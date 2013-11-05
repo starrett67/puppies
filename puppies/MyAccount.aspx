@@ -45,7 +45,10 @@
                 }
             });
         };
-
+        console.log(document.getElementById("fName"));
+        if (document.getElementById("fName").value == "") {
+            document.getElementById("AccountContainer").innerHTML = "<font color='red'><h2>Please login first</h2></font>";
+        }
         // Load the SDK asynchronously
         (function (d) {
             var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
@@ -75,7 +78,7 @@
             });
         }
     </script>
-    <div class="container">
+    <div id="AccountContainer" class="container">
         <div class="row" style="height: 60px;">
         </div>
         <div class="row">
