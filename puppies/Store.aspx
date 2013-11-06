@@ -39,6 +39,8 @@
          type: 'GET',
          success: function (data, textStatus, xhr) {
              console.debug(data);
+             //TODO: markup the products dynamicly by looping through returned object
+             //and putting into the page as html
          },
          error: function (xhr, textStatus, error) {
              console.debug(error);
