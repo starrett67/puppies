@@ -27,14 +27,14 @@
      The "1" value in the latter format is arbitrary.  IE just doesn't allow the value of a header to be empty, so we filled it with "1".
      */
 
-     var publicKeyHeader = 'X-StackMob-API-Key-ae924762-6432-41d7-88ca-5f034661e46b';
+     var publicKeyHeader = 'X-StackMob-API-Key-dc0e228a-ccd3-4799-acd5-819f6c074ace';
      var requestHeaders = {};
      requestHeaders['Accept'] = 'application/vnd.stackmob+json; version=0';
      requestHeaders[publicKeyHeader] = 1;
-     //requestHeaders['Range'] = 'objects=0-9'; //set pagination to first 10
+     requestHeaders['Range'] = 'objects=0-9'; //set pagination to first 10
 
      $.ajax({
-         url: 'http://api.stackmob.com/user',
+         url: 'https://api.stackmob.com/item',
          headers: requestHeaders, //set the headers
          type: 'GET',
          success: function (data, textStatus, xhr) {
