@@ -34,7 +34,7 @@
      //requestHeaders['Range'] = 'objects=0-9'; //set pagination to first 10
 
      $.ajax({
-         url: 'https://api.stackmob.com/user',
+         url: 'http://api.stackmob.com/user',
          headers: requestHeaders, //set the headers
          type: 'GET',
          success: function (data, textStatus, xhr) {
