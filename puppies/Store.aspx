@@ -2,6 +2,50 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="PuppyContent" runat="server">
+ <script>
+     /*
+     We want to prepare the Request headers we're going to send to StackMob.  It should look like:
+
+     {
+     'Accept': application/vnd.stackmob+json; version=0',
+     'X-StackMob-API-Key-dc0e228a-ccd3-4799-acd5-819f6c074ace': 1,
+     'Range': 'objects=0-9'  //this is optional, but I did it here to show pagination and extra header fields
+     }
+
+     You can actually have the public key in the header as:
+
+     'X-StackMob-API-Key': dc0e228a-ccd3-4799-acd5-819f6c074ace
+
+     OR
+
+     'X-StackMob-API-Key-dc0e228a-ccd3-4799-acd5-819f6c074ace': 1
+
+     The first is our original format.  The reason why I chose the latter is because of this specific example.  I'm making cross domain requests jsfiddle.net to api.stackmob.com, which the browser doesn't allow UNLESS we use CORS (cross origin resource sharing).  StackMob servers support CORS, but it needs the latter header format to do so.  (it was introduced later).  iOS and Android SDKs use the first format.
+
+     Node.js should be able to use the first format because it doesn't restrict cross domain calls.
+
+     The "1" value in the latter format is arbitrary.  IE just doesn't allow the value of a header to be empty, so we filled it with "1".
+     */
+
+     var publicKeyHeader = 'X-StackMob-API-Key-ae924762-6432-41d7-88ca-5f034661e46b';
+     var requestHeaders = {};
+     requestHeaders['Accept'] = 'application/vnd.stackmob+json; version=0';
+     requestHeaders[publicKeyHeader] = 1;
+     //requestHeaders['Range'] = 'objects=0-9'; //set pagination to first 10
+
+     $.ajax({
+         url: 'https://api.stackmob.com/Products',
+         headers: requestHeaders, //set the headers
+         type: 'GET',
+         success: function (data, textStatus, xhr) {
+             console.debug(data);
+         },
+         error: function (xhr, textStatus, error) {
+             console.debug(error);
+         }
+     });
+ 
+ </script>
  <div class="container">
         <div class="row" style="height: 60px;">
         </div>
