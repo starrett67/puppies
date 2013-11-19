@@ -2,9 +2,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="PuppyContent" runat="server">
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
  <script src="/Scripts/YoutubeAuth.js" type="text/javascript"></script>
  <script src="/Scripts/YoutubeSearch.js" type="text/javascript"></script>
- <script>
+ <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady" type="text/javascript"></script>
+ <script type="text/javascript">
      /*
      We want to prepare the Request headers we're going to send to StackMob.  It should look like:
 
