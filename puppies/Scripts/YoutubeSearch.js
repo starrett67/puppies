@@ -18,7 +18,7 @@ function search(val, container) {
         console.log(str);
         var jsonObj = JSON.parse(str);
         console.log(jsonObj);
-        var videoID = jsonObj.items[0].videoId;
+        var videoID = response.items[0].id.videoId;
         console.log(videoID);
         $('#' + container).html('<iframe width="420" height="315" src="//www.youtube.com/embed/' + videoID + '" frameborder="0" allowfullscreen></iframe>');
     });
