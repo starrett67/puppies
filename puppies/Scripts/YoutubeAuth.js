@@ -49,6 +49,7 @@ function handleAuthResult(authResult) {
 // This is required before using the Google APIs JS client; more info is available at
 // http://code.google.com/p/google-api-javascript-client/wiki/GettingStarted#Loading_the_Client
 function loadAPIClientInterfaces() {
+    alert("loading api client");
     gapi.client.load('youtube', 'v3', function () {
         handleAPILoaded();
     });
