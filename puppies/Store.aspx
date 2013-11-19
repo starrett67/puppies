@@ -74,6 +74,7 @@
                      <p>
                          <a href="#" class="btn btn-primary">Buy Now!</a> <a href="javascript:search('Brown Puppy', 'SearchResultsBrownPuppy');" class="btn btn-default">
                              More Info</a>
+                             <a href="#" id="login-link">please login first</a>
                      </p>
                      <div id="SearchResultsBrownPuppy">
                              </div>
