@@ -1,7 +1,7 @@
 // The client id is obtained from the Google APIs Console at https://code.google.com/apis/console
 // If you run access this code from a server other than http://localhost, you need to register
 // your own client id.
-var OAUTH2_CLIENT_ID = 'comp-puppiesrus';
+var OAUTH2_CLIENT_ID = '697108527193-c9q9tn8d61cuhcckta50jv25407fgb2p.apps.googleusercontent.com';
 var OAUTH2_SCOPES = [
   'https://www.googleapis.com/auth/youtube'
 ];
