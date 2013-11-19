@@ -63,7 +63,7 @@
      </div>
      <!-- /.row -->
      
-     <a href="#" style="visibility: hidden" id="login-link">please login first</a>
+     <a href="#" id="login-link">please login first</a>
      <div class="row text-center">
          <div class="col-lg-3 col-md-6 hero-feature">
              <div class="thumbnail">
