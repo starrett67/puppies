@@ -2,8 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="PuppyContent" runat="server">
- <script src="~/Scripts/YoutubeAuth.js" type="text/javascript"></script>
- <script src="~/Scripts/YoutubeSearch.js" type="text/javascript"></script>
+ <script src="/Scripts/YoutubeAuth.js" type="text/javascript"></script>
+ <script src="/Scripts/YoutubeSearch.js" type="text/javascript"></script>
  <script>
      /*
      We want to prepare the Request headers we're going to send to StackMob.  It should look like:
