@@ -2,6 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="PuppyContent" runat="server">
+ <script src="~/Scripts/YoutubeAuth.js" type="text/javascript"></script>
+ <script src="~/Scripts/YoutubeSearch.js" type="text/javascript"></script>
  <script>
      /*
      We want to prepare the Request headers we're going to send to StackMob.  It should look like:
@@ -68,8 +70,11 @@
                      <p>
                          This would be a great dog to have!</p>
                      <p>
-                         <a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">
-                             More Info</a></p>
+                         <a href="#" class="btn btn-primary">Buy Now!</a> <a href="javascript:search('Brown Puppy', 'SearchResultsBrownPuppy');" class="btn btn-default">
+                             More Info</a>
+                     </p>
+                     <div id="SearchResultsBrownPuppy">
+                             </div>
                  </div>
              </div>
          </div>

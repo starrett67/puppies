@@ -88,6 +88,8 @@
     <Content Include="Login.aspx" />
     <Content Include="MyAccount.aspx" />
     <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\YoutubeAuth.js" />
+    <Content Include="Scripts\YoutubeSearch.js" />
     <Content Include="Store.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
