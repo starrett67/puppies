@@ -62,6 +62,8 @@
          </div>
      </div>
      <!-- /.row -->
+     
+     <a href="#" style="visibility: hidden" id="login-link">please login first</a>
      <div class="row text-center">
          <div class="col-lg-3 col-md-6 hero-feature">
              <div class="thumbnail">
@@ -71,10 +73,9 @@
                          Brown Puppy</h3>
                      <p>
                          This would be a great dog to have!</p>
-                     <p>
+                     <p id="BrownPuppy">
                          <a href="#" class="btn btn-primary">Buy Now!</a> <a href="javascript:search('Brown Puppy', 'SearchResultsBrownPuppy');" class="btn btn-default">
                              More Info</a>
-                             <a href="#" id="login-link">please login first</a>
                      </p>
                      <div id="SearchResultsBrownPuppy">
                              </div>

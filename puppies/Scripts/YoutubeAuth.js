@@ -33,8 +33,9 @@ function handleAuthResult(authResult) {
         $('.pre-auth').hide();
         loadAPIClientInterfaces();
     } else {
-        // Make the #login-link clickable, and attempt a non-immediate OAuth 2 client flow.
+        // Make the #login-link clickable, and attempt a non-immediate OAuth 2 loclient flow.
         // The current function will be called when that flow is complete.
+        document.getElementById("login-link").style.visibility = 'visible';
         $('#login-link').click(function () {
             gapi.auth.authorize({
                 client_id: OAUTH2_CLIENT_ID,
