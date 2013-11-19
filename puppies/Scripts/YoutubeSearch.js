@@ -7,6 +7,7 @@ function handleAPILoaded() {
 function search(val, container) {
     alert(val + container);
     var q = val;
+    console.log(gapi);
     var request = gapi.client.youtube.search.list({
         q: q,
         part: 'snippet'
