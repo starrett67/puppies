@@ -7,7 +7,7 @@
  <script src="/Scripts/YoutubeSearch.js" type="text/javascript"></script>
  <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady" type="text/javascript"></script>
  <script type="text/javascript">
-     $('#divLogin-link').hide();
+     $('#divLogin-link').toggle();
      /*
      We want to prepare the Request headers we're going to send to StackMob.  It should look like:
 
