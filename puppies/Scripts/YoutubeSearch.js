@@ -13,6 +13,7 @@ function search(val, container) {
     });
 
     request.execute(function (response) {
+        console.log(response.results.items);
         var videoID = response.results[0].videoID;
         var str = JSON.stringify(response.result);
         $('#' + container).html('<iframe width="420" height="315" src="//www.youtube.com/embed/' + videoID + '" frameborder="0" allowfullscreen></iframe>');
