@@ -7,7 +7,7 @@
  <script src="/Scripts/YoutubeSearch.js" type="text/javascript"></script>
  <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady" type="text/javascript"></script>
  <script type="text/javascript">
-     $('#login-link').hide();
+     $('#divLogin-link').hide();
      /*
      We want to prepare the Request headers we're going to send to StackMob.  It should look like:
 
@@ -63,8 +63,9 @@
          </div>
      </div>
      <!-- /.row -->
-     
-     <a href="#" id="login-link">please login first</a>
+     <div id="divLogin-link">
+        <a href="#" id="login-link">please login first</a>
+     </div>
      <div class="row text-center">
          <div class="col-lg-3 col-md-6 hero-feature">
              <div class="thumbnail">
