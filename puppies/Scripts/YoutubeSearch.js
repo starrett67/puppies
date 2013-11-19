@@ -13,7 +13,7 @@ function search(val, container) {
     });
 
     request.execute(function (response) {
-        console.log(response.results[0]);
+        console.log(response.results);
         var str = JSON.stringify(response.result);
         $('#' + container).html('<pre>' + str + '</pre>');
     });
