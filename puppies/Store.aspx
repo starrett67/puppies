@@ -46,6 +46,9 @@
                  console.log(data);
                  var length = Math.abs(data.length);
                  console.log(length);
+                 var JSONStr = JSON.Strigify(data);
+                 var JSON = JSON.parse(JSONStr);
+                 console.log(JSON);
                  var description = data[i].Object.description;
                  var Name = data[i].Object.name;
                  var price = data[i].Object.price;
