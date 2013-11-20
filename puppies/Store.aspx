@@ -94,8 +94,8 @@
      <div id="divLogin-link">
         <a href="#" id="login-link">please login first</a>
      </div>
-     <!--<div class="row text-center">
-         <div class="col-lg-3 col-md-6 hero-feature">
+     <div class="row text-center">
+     <!--    <div class="col-lg-3 col-md-6 hero-feature">
              <div class="thumbnail">
                  <img src="http://farm5.staticflickr.com/4081/4883281674_8428f07e53_z.jpg" alt="">
                  <div class="caption">
@@ -157,7 +157,7 @@
      </div>
      <!-- /.row -->
      <hr />
-     <div class="row text-center">
+     <!--<div class="row text-center">
          <div class="col-lg-3 col-md-6 hero-feature">
              <div class="thumbnail">
                  <img src="http://farm5.staticflickr.com/4081/4883281674_8428f07e53_z.jpg" alt="">
@@ -214,7 +214,7 @@
                  </div>
              </div>
          </div>
-     </div>
+     </div>-->
      <!-- /.row -->
      </div>
 </asp:Content>
