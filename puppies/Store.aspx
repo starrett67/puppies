@@ -58,7 +58,6 @@
                      console.log(Javascript);
                      if (i % 4 == 0 || i == 0) {
                          //need a new row
-                         alert("AddNewRow i = " + i);
                          document.getElementById("container").innerHTML += '<div class="row text-center">';
                      }
                      document.getElementById("container").innerHTML += '<div class="col-lg-3 col-md-6 hero-feature"><div class="thumbnail">' +
@@ -66,7 +65,6 @@
                         '<a href="#" class="btn btn-primary">Buy Now!</a> <a href="' + Javascript + '" class="btn btn-default"> Youtube </a>' +
                         '<div id="SearchResults' + Name + '"></div></div></div>'
                      if (((i + 1) % 4 == 0 && i >= 3) || (i + 1) == data.length) {
-                         alert("ExitRow i = " + i);
                          document.getElementById("container").innerHTML += '</div>';
                      }
                  }

@@ -5,6 +5,10 @@ function handleAPILoaded() {
 
 // Search for a given string.
 function search(val, container) {
+    if ($('#' + container).html().contains("iframe")) {
+        $('#' + container).html('');
+        return;
+    }
     var q = val;
     console.log(gapi);
     var request = gapi.client.youtube.search.list({
