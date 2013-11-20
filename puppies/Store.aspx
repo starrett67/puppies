@@ -59,7 +59,7 @@
                      if ((i + 1) % 4 == 0 || i == 0) {
                          //need a new row
                          alert("AddNewRow i = " + i);
-                         document.getElementById("container").innerHTML += '<div id="Row' + rowNum + ' class="row text-center">';
+                         document.getElementById("container").innerHTML += '<div class="row text-center">';
                      }
                      document.getElementById("container").innerHTML += '<div class="col-lg-3 col-md-6 hero-feature"><div class="thumbnail">' +
                         '<img src="' + imgSource + '" /><div class="caption"><h3>' + Name + '</h3><p>' + description + '<p id="' + Name + '">' +
