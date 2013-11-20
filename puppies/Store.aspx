@@ -60,7 +60,7 @@
                          //need a new row
                          var rowNum = (i + 1) / 4;
                          if (rowNum >= 1) {
-                             alert("ExitRow i = " + i);
+                             alert("ExitRow i = " + i + "RowNum = " rowNum);
                              document.getElementById("container").innerHTML += '</div>'
                          }
                          alert("AddNewRow i = " + i);
