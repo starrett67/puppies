@@ -59,7 +59,7 @@
                      if ((i + 1) % 4 == 0) {
                          //need a new row
                          var rowNum = (i + 1) / 4;
-                         if (rowNum != 0) {
+                         if (rowNum >= 1) {
                              alert("ExitRow i = " + i);
                              document.getElementById("container").innerHTML += '</div>'
                          }
