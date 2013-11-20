@@ -56,6 +56,9 @@
                      }
                      var Javascript = "Javascript:search('" + jName + "', 'SearchResults" + Name + "');"
                      console.log(Javascript);
+                     if (i == 4) {
+                         document.getElementById("container").innerHTML += '</div>';
+                     }
                      if ((i + 1) % 4 == 0 || i == 0) {
                          //need a new row
                          alert("AddNewRow i = " + i);
@@ -67,7 +70,7 @@
                         '<div id="SearchResults' + Name + '"></div></div></div>'
                      if ((i + 1) % 4 == 0 && i >= 3) {
                          alert("ExitRow i = " + i);
-                         document.getElementById("container").innerHTML += '</div>'
+                         document.getElementById("container").innerHTML += '</div>';
                      }
                  }
                  //TODO: markup the products dynamicly by looping through returned object
