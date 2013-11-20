@@ -43,14 +43,13 @@
              type: 'GET',
              success: function (data, textStatus, xhr) {
                  console.log(data);
-                 var length = Math.abs(data.length);
-                 var Name = JSON.stringify(data[i].name);
-                 console.log(Name);
-                 var description = data[i].description;
-                 var price = data[i].price;
-                 var imgSource = data[i].pic_url;
-                 var Javscript = "Javascript:search('Name', 'SearchResults" + Name + "');"
                  for (var i = 0; i < length; i++) {
+                     var length = Math.abs(data.length);
+                     var Name = data[i].name;
+                     var description = data[i].description;
+                     var price = data[i].price;
+                     var imgSource = data[i].pic_url;
+                     var Javscript = "Javascript:search('Name', 'SearchResults" + Name + "');"
                      if (i % 4 == 0) {
                          //need a new row
                          var rowNum = i / 4;
