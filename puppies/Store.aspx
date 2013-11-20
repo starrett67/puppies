@@ -44,6 +44,26 @@
              type: 'GET',
              success: function (data, textStatus, xhr) {
                  console.debug(data);
+                 var length = Math.abs(data.length);
+                 var description = data[i].description;
+                 var Name = data[i].name;
+                 var price = data[i].price;
+                 var imgSource = data[i].pic_url;
+                 var Javscript = "Javascript:search('Name', 'SearchResults" + Name + "');"
+                 for (var i = 0; i < length; i++) {
+                     if (i % 3 == 0) {
+                         //need a new row
+                         var rowNum = i / 3;
+                         if (rowNum != 0) {
+                             document.getElementById("container").innerHTML += '</div>'
+                         }
+                         document.getElementById("container").innerHTML += '<div id="Row' + rowNum + ' class="row text-center">';
+                     }
+                     document.getElementById("container").innerHTML += '<div class="col-lg-3 col-md-6 hero-feature"><div class="thumbnail">' +
+                        '<img src="' + imgSource + '" /><div class="caption"><h3>' + Name + '</h3><p>' + description + '<p id="' + Name + '">' +
+                        '<a href="#" class="btn btn-primary">Buy Now!</a> <a href="' + Javscript + '" class="btn btn-default"> Youtube </a>' +
+                        '<div id="SearchResults' + Name + '"></div></div></div>'
+                 }
                  //TODO: markup the products dynamicly by looping through returned object
                  //and putting into the page as html
              },
@@ -54,7 +74,7 @@
      }
  
  </script>
- <div class="container">
+ <div id="container" class="container">
         <div class="row" style="height: 60px;">
         </div>
      <div class="row">
