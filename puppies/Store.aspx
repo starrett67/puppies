@@ -49,6 +49,7 @@
                      var description = data[i].description;
                      var price = data[i].price;
                      var imgSource = data[i].pic_url;
+                     console.log(Name + description + price + imgSource);
                      var Javscript = "Javascript:search('Name', 'SearchResults" + Name + "');"
                      console.log(Javascript);
                      if (i % 4 == 0) {
