@@ -45,13 +45,13 @@
              success: function (data, textStatus, xhr) {
                  console.log(data);
                  var length = Math.abs(data.length);
-                 console.log(length);
                  var JSON = jQuery.parseJSON(data);
                  console.log(JSON);
-                 var description = data[i].Object.description;
-                 var Name = data[i].Object.name;
-                 var price = data[i].Object.price;
-                 var imgSource = data[i].Object.pic_url;
+                 var Name = JSON.stringify(data[i].name);
+                 console.log(Name);
+                 var description = data[i].description;
+                 var price = data[i].price;
+                 var imgSource = data[i].pic_url;
                  var Javscript = "Javascript:search('Name', 'SearchResults" + Name + "');"
                  for (var i = 0; i < length; i++) {
                      if (i % 4 == 0) {
