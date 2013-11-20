@@ -56,13 +56,8 @@
                      }
                      var Javascript = "Javascript:search('" + jName + "', 'SearchResults" + Name + "');"
                      console.log(Javascript);
-                     if ((i + 1) % 4 == 0) {
+                     if ((i + 1) % 4 == 0 || i == 0) {
                          //need a new row
-                         var rowNum = (i + 5) / 4;
-                         if (rowNum >= 2) {
-                             alert("ExitRow i = " + i + "RowNum = " + rowNum);
-                             document.getElementById("container").innerHTML += '</div>'
-                         }
                          alert("AddNewRow i = " + i);
                          document.getElementById("container").innerHTML += '<div id="Row' + rowNum + ' class="row text-center">';
                      }
@@ -70,8 +65,11 @@
                         '<img src="' + imgSource + '" /><div class="caption"><h3>' + Name + '</h3><p>' + description + '<p id="' + Name + '">' +
                         '<a href="#" class="btn btn-primary">Buy Now!</a> <a href="' + Javascript + '" class="btn btn-default"> Youtube </a>' +
                         '<div id="SearchResults' + Name + '"></div></div></div>'
+                     if ((i + 1) % 4 == 0 && i >= 3) {
+                         alert("ExitRow i = " + i + "RowNum = " + rowNum);
+                         document.getElementById("container").innerHTML += '</div>'
+                     }
                  }
-                 document.getElementById("container").innerHTML += '</div>'
                  //TODO: markup the products dynamicly by looping through returned object
                  //and putting into the page as html
              },
