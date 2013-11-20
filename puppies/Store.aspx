@@ -54,7 +54,7 @@
                      for (var j = 0; j < temp.length; j++) {
                          jName += temp[j];
                      }
-                     var Javascript = "Javascript:search('" + jName + "', 'SearchResults" + Name + "');"
+                     var Javascript = "Javascript:search('" + jName + "', 'SearchResults" + jName + "');"
                      console.log(Javascript);
                      if (i % 4 == 0 || i == 0) {
                          //need a new row
@@ -63,7 +63,7 @@
                      document.getElementById("container").innerHTML += '<div class="col-lg-3 col-md-6 hero-feature"><div class="thumbnail">' +
                         '<img src="' + imgSource + '" /><div class="caption"><h3>' + Name + '</h3><p>' + description + '<p id="' + Name + '">' +
                         '<a href="#" class="btn btn-primary">Buy Now!</a> <a href="' + Javascript + '" class="btn btn-default"> Youtube </a>' +
-                        '<div id="SearchResults' + Name + '"></div></div></div>'
+                        '<div id="SearchResults' + jName + '"></div></div></div>'
                      if (((i + 1) % 4 == 0 && i >= 3) || (i + 1) == data.length) {
                          document.getElementById("container").innerHTML += '</div>';
                      }
