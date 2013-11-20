@@ -44,7 +44,7 @@
              success: function (data, textStatus, xhr) {
                  console.log(data);
                  console.log("afterData");
-                 for (var i = Math.abs(0); i < length; i++) {
+                 for (var i = 0; i < data.length; i++) {
                      console.log("For Hit");
                      var length = Math.abs(data.length);
                      var Name = data[i].name;
@@ -77,6 +77,7 @@
              error: function (xhr, textStatus, error) {
                  console.debug(error);
              }
+             console.log("exit");
          });
      }
  
