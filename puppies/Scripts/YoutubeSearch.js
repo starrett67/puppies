@@ -5,7 +5,7 @@ function handleAPILoaded() {
 
 // Search for a given string.
 function search(val, container) {
-    if ($('#' + container).html().contains("iframe")) {
+    if ($('#' + container).html().indexOf("iframe") > 0 ) {
         $('#' + container).html('');
         return;
     }
