@@ -4,9 +4,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="PuppyContent" runat="server">
     
     <!--https://developers.google.com/blogger/docs/3.0/using#RetrievingPostsForABlog-->
-
+    
     <div class="container">
-
+    <!-->
       <div class="row">
 
         <div class="col-md-1">
@@ -73,6 +73,6 @@
         </ul>
 
       </div>
-
+      <!-->
     </div><!-- /.container -->
     </asp:Content>
