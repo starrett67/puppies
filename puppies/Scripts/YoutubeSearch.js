@@ -12,7 +12,9 @@ function search(val, container) {
         part: 'snippet'
     });
 
-    request.execute(function (response) {        
+    request.execute(function (response) {
+        console.log(response);
+        console.log(response.log);
         var videoID = response.items[0].id.videoId;
         $('#' + container).html('<iframe width="420" height="315" src="//www.youtube.com/embed/' + videoID + '" frameborder="0" allowfullscreen></iframe>');
     });
