@@ -43,32 +43,29 @@
              type: 'GET',
              success: function (data, textStatus, xhr) {
                  console.log(data);
-                 console.log("afterData");
                  for (var i = 0; i < data.length; i++) {
-                     console.log("For Hit");
                      var length = Math.abs(data.length);
                      var Name = data[i].Name;
                      var description = data[i].description;
                      var price = data[i].price;
                      var imgSource = data[i].pic_url;
                      var temp = Name.split(' ');
-                     Name = "";
+                     var jName = "";
                      for (var j = 0; j < temp.length; j++) {
-                         Name += temp[j];
+                         jName += temp[j];
                      }
-                     var Javascript = "Javascript:search('" + Name + "', 'SearchResults" + Name + "');"
+                     var Javascript = "Javascript:search('" + jName + "', 'SearchResults" + Name + "');"
                      console.log(Javascript);
                      if ((i + 1) % 4 == 0) {
-                         console.log("1");
                          //need a new row
                          var rowNum = (i + 1) / 4;
                          if (rowNum != 0) {
+                             alert("ExitRow i = " + i);
                              document.getElementById("container").innerHTML += '</div>'
                          }
-                         console.log("2");
+                         alert("AddNewRow i = " + i);
                          document.getElementById("container").innerHTML += '<div id="Row' + rowNum + ' class="row text-center">';
                      }
-                     console.log("3");
                      document.getElementById("container").innerHTML += '<div class="col-lg-3 col-md-6 hero-feature"><div class="thumbnail">' +
                         '<img src="' + imgSource + '" /><div class="caption"><h3>' + Name + '</h3><p>' + description + '<p id="' + Name + '">' +
                         '<a href="#" class="btn btn-primary">Buy Now!</a> <a href="' + Javascript + '" class="btn btn-default"> Youtube </a>' +
