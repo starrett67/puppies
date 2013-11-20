@@ -66,7 +66,7 @@
                         '<a href="#" class="btn btn-primary">Buy Now!</a> <a href="' + Javascript + '" class="btn btn-default"> Youtube </a>' +
                         '<div id="SearchResults' + Name + '"></div></div></div>'
                      if ((i + 1) % 4 == 0 && i >= 3) {
-                         alert("ExitRow i = " + i + "RowNum = " + rowNum);
+                         alert("ExitRow i = " + i);
                          document.getElementById("container").innerHTML += '</div>'
                      }
                  }
