@@ -44,7 +44,9 @@
              type: 'GET',
              success: function (data, textStatus, xhr) {
                  console.debug(data);
+                 console.log(data);
                  var length = Math.abs(data.length);
+                 console.log(length);
                  var description = data[i].description;
                  var Name = data[i].name;
                  var price = data[i].price;
