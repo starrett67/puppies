@@ -77,8 +77,8 @@
              error: function (xhr, textStatus, error) {
                  console.debug(error);
              }
-             console.log("exit");
          });
+         console.log("exit");
      }
  
  </script>
