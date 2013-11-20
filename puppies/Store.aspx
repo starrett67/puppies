@@ -66,7 +66,7 @@
                      console.log("3");
                      document.getElementById("container").innerHTML += '<div class="col-lg-3 col-md-6 hero-feature"><div class="thumbnail">' +
                         '<img src="' + imgSource + '" /><div class="caption"><h3>' + Name + '</h3><p>' + description + '<p id="' + Name + '">' +
-                        '<a href="#" class="btn btn-primary">Buy Now!</a> <a href="' + Javscript + '" class="btn btn-default"> Youtube </a>' +
+                        '<a href="#" class="btn btn-primary">Buy Now!</a> <a href="' + Javascript + '" class="btn btn-default"> Youtube </a>' +
                         '<div id="SearchResults' + Name + '"></div></div></div>'
                  }
                  document.getElementById("container").innerHTML += '</div>'
