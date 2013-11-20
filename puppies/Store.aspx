@@ -56,7 +56,7 @@
                      if ((i + 1) % 4 == 0) {
                          console.log("1");
                          //need a new row
-                         var rowNum = i / 4;
+                         var rowNum = (i + 1) / 4;
                          if (rowNum != 0) {
                              document.getElementById("container").innerHTML += '</div>'
                          }
