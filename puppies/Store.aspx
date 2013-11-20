@@ -43,19 +43,18 @@
              headers: requestHeaders, //set the headers
              type: 'GET',
              success: function (data, textStatus, xhr) {
-                 console.debug(data);
                  console.log(data);
                  var length = Math.abs(data.length);
                  console.log(length);
-                 var description = data[i].description;
-                 var Name = data[i].name;
-                 var price = data[i].price;
-                 var imgSource = data[i].pic_url;
+                 var description = data[i].Object.description;
+                 var Name = data[i].Object.name;
+                 var price = data[i].Object.price;
+                 var imgSource = data[i].Object.pic_url;
                  var Javscript = "Javascript:search('Name', 'SearchResults" + Name + "');"
                  for (var i = 0; i < length; i++) {
-                     if (i % 3 == 0) {
+                     if (i % 4 == 0) {
                          //need a new row
-                         var rowNum = i / 3;
+                         var rowNum = i / 4;
                          if (rowNum != 0) {
                              document.getElementById("container").innerHTML += '</div>'
                          }
@@ -66,6 +65,7 @@
                         '<a href="#" class="btn btn-primary">Buy Now!</a> <a href="' + Javscript + '" class="btn btn-default"> Youtube </a>' +
                         '<div id="SearchResults' + Name + '"></div></div></div>'
                  }
+                 document.getElementById("container").innerHTML += '</div>'
                  //TODO: markup the products dynamicly by looping through returned object
                  //and putting into the page as html
              },
