@@ -37,20 +37,22 @@
      requestHeaders['Accept'] = 'application/vnd.stackmob+json; version=0';
      requestHeaders[publicKeyHeader] = 1;
      requestHeaders['Range'] = 'objects=0-9'; //set pagination to first 10
-
-     $.ajax({
-         url: 'https://api.stackmob.com/Products',
-         headers: requestHeaders, //set the headers
-         type: 'GET',
-         success: function (data, textStatus, xhr) {
-             console.debug(data);
-             //TODO: markup the products dynamicly by looping through returned object
-             //and putting into the page as html
-         },
-         error: function (xhr, textStatus, error) {
-             console.debug(error);
-         }
-     });
+     fillStorePage();
+     function fillStorePage() {
+         $.ajax({
+             url: 'https://api.stackmob.com/Products',
+             headers: requestHeaders, //set the headers
+             type: 'GET',
+             success: function (data, textStatus, xhr) {
+                 console.debug(data);
+                 //TODO: markup the products dynamicly by looping through returned object
+                 //and putting into the page as html
+             },
+             error: function (xhr, textStatus, error) {
+                 console.debug(error);
+             }
+         });
+     }
  
  </script>
  <div class="container">
