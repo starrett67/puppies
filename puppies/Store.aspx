@@ -50,14 +50,18 @@
                      var price = data[i].price;
                      var imgSource = data[i].pic_url;
                      var Javscript = "Javascript:search('Name', 'SearchResults" + Name + "');"
+                     console.log(Javascript);
                      if (i % 4 == 0) {
+                         console.log("1");
                          //need a new row
                          var rowNum = i / 4;
                          if (rowNum != 0) {
                              document.getElementById("container").innerHTML += '</div>'
                          }
+                         console.log("2");
                          document.getElementById("container").innerHTML += '<div id="Row' + rowNum + ' class="row text-center">';
                      }
+                     console.log("3");
                      document.getElementById("container").innerHTML += '<div class="col-lg-3 col-md-6 hero-feature"><div class="thumbnail">' +
                         '<img src="' + imgSource + '" /><div class="caption"><h3>' + Name + '</h3><p>' + description + '<p id="' + Name + '">' +
                         '<a href="#" class="btn btn-primary">Buy Now!</a> <a href="' + Javscript + '" class="btn btn-default"> Youtube </a>' +
