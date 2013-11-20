@@ -58,8 +58,8 @@
                      console.log(Javascript);
                      if ((i + 1) % 4 == 0) {
                          //need a new row
-                         var rowNum = (i + 1) / 4;
-                         if (rowNum >= 1) {
+                         var rowNum = (i + 5) / 4;
+                         if (rowNum >= 2) {
                              alert("ExitRow i = " + i + "RowNum = " + rowNum);
                              document.getElementById("container").innerHTML += '</div>'
                          }
