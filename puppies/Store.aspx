@@ -56,7 +56,7 @@
                      }
                      var Javascript = "Javascript:search('" + jName + "', 'SearchResults" + Name + "');"
                      console.log(Javascript);
-                     if ((i % 4 == 0 || i == 0) {
+                     if (i % 4 == 0 || i == 0) {
                          //need a new row
                          alert("AddNewRow i = " + i);
                          document.getElementById("container").innerHTML += '<div class="row text-center">';
