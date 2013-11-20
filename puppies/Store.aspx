@@ -56,10 +56,7 @@
                      }
                      var Javascript = "Javascript:search('" + jName + "', 'SearchResults" + Name + "');"
                      console.log(Javascript);
-                     if (i == 4) {
-                         document.getElementById("container").innerHTML += '</div>';
-                     }
-                     if ((i + 1) % 4 == 0 || i == 0) {
+                     if ((i % 4 == 0 || i == 0) {
                          //need a new row
                          alert("AddNewRow i = " + i);
                          document.getElementById("container").innerHTML += '<div class="row text-center">';
@@ -68,7 +65,7 @@
                         '<img src="' + imgSource + '" /><div class="caption"><h3>' + Name + '</h3><p>' + description + '<p id="' + Name + '">' +
                         '<a href="#" class="btn btn-primary">Buy Now!</a> <a href="' + Javascript + '" class="btn btn-default"> Youtube </a>' +
                         '<div id="SearchResults' + Name + '"></div></div></div>'
-                     if ((i + 1) % 4 == 0 && i >= 3) {
+                     if (((i + 1) % 4 == 0 && i >= 3) || (i + 1) == data.length) {
                          alert("ExitRow i = " + i);
                          document.getElementById("container").innerHTML += '</div>';
                      }
