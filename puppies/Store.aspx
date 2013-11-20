@@ -47,13 +47,13 @@
                  for (var i = 0; i < data.length; i++) {
                      console.log("For Hit");
                      var length = Math.abs(data.length);
-                     var Name = data[i].name;
+                     var Name = data[i].Name;
                      var description = data[i].description;
                      var price = data[i].price;
                      var imgSource = data[i].pic_url;
                      var Javascript = "Javascript:search('Name', 'SearchResults" + Name + "');"
                      console.log(Javascript);
-                     if (i % 4 == 0) {
+                     if ((i + 1) % 4 == 0) {
                          console.log("1");
                          //need a new row
                          var rowNum = i / 4;
@@ -94,7 +94,7 @@
      <div id="divLogin-link">
         <a href="#" id="login-link">please login first</a>
      </div>
-     <div class="row text-center">
+     <!--<div class="row text-center">
          <div class="col-lg-3 col-md-6 hero-feature">
              <div class="thumbnail">
                  <img src="http://farm5.staticflickr.com/4081/4883281674_8428f07e53_z.jpg" alt="">
@@ -153,7 +153,7 @@
                              More Info</a></p>
                  </div>
              </div>
-         </div>
+         </div> -->
      </div>
      <!-- /.row -->
      <hr />
