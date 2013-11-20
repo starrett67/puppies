@@ -43,7 +43,8 @@
              type: 'GET',
              success: function (data, textStatus, xhr) {
                  console.log(data);
-                 for (var i = 0; i < length; i++) {
+                 for (var i = Math.abs(0); i < length; i++) {
+                     console.log("For Hit");
                      var length = Math.abs(data.length);
                      var Name = data[i].name;
                      var description = data[i].description;
