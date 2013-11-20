@@ -30,7 +30,6 @@
 
      The "1" value in the latter format is arbitrary.  IE just doesn't allow the value of a header to be empty, so we filled it with "1".
      */
-
      var publicKeyHeader = 'X-StackMob-API-Key-ae924762-6432-41d7-88ca-5f034661e46b';
      var requestHeaders = {};
      requestHeaders['Accept'] = 'application/vnd.stackmob+json; version=0';
@@ -45,8 +44,6 @@
              success: function (data, textStatus, xhr) {
                  console.log(data);
                  var length = Math.abs(data.length);
-                 var JSON = jQuery.parseJSON(data);
-                 console.log(JSON);
                  var Name = JSON.stringify(data[i].name);
                  console.log(Name);
                  var description = data[i].description;
