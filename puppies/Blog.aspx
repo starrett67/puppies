@@ -1,17 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Blog.aspx.cs" Inherits="puppies.Blog" %>
-
-<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" Inherits="System.Web.Mvc.ViewPage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" Inherits="System.Web.Mvc.ViewPage"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="PuppyContent" runat="server">
     
-    <!--
-    Where to find how to get blog posts from blogger
-    https://developers.google.com/blogger/docs/3.0/using#RetrievingPostsForABlog -->
+    <!--https://developers.google.com/blogger/docs/3.0/using#RetrievingPostsForABlog-->
+
     <div class="container">
 
-      
-      
       <div class="row">
 
         <div class="col-md-1">
