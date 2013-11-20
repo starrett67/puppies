@@ -51,6 +51,11 @@
                      var description = data[i].description;
                      var price = data[i].price;
                      var imgSource = data[i].pic_url;
+                     var temp = Name.split(' ');
+                     Name = "";
+                     for (var j = 0; j < temp.length; j++) {
+                         Name += temp[j];
+                     }
                      var Javascript = "Javascript:search('" + Name + "', 'SearchResults" + Name + "');"
                      console.log(Javascript);
                      if ((i + 1) % 4 == 0) {
