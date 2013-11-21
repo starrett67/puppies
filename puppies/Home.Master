@@ -31,9 +31,10 @@
                     <li><a href="Login.aspx">Login</a></li>
                     <li><a href="Blog.aspx">Blog</a></li>
                 </ul>
+                <span class="glyphicon glyphicon-shopping-cart" style="color:White;"> </span>
             </div>
             <!-- /.navbar-collapse -->
-           <span class=" glyphicon .glyphicon-shopping-cart" style="color:White;"> </span>
+           
         </div>
         <!-- /.container -->
     </nav>
