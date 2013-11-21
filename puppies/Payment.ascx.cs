@@ -66,43 +66,43 @@ namespace puppies
             if (String.IsNullOrEmpty(CardNumber.Text))
             {
                 success = false;
-                Error.Text += "Err: Please give us your card number.";
+                Error.Text = "Err: Please give us your card number.";
                 return success;
             }
             if (String.IsNullOrEmpty(CvvCode.Text))
             {
                 success = false;
-                Error.Text += "Err: Please give us your cvv code.";
+                Error.Text = "Err: Please give us your cvv code.";
                 return success;
             }
             if (String.IsNullOrEmpty(Address.Text))
             {
                 success = false;
-                Error.Text += "Err: Please give us your billing address.";
+                Error.Text = "Err: Please give us your billing address.";
                 return success;
             }
             if (String.IsNullOrEmpty(City.Text))
             {
                 success = false;
-                Error.Text += "Err: Please input the city you live in.";
+                Error.Text = "Err: Please input the city you live in.";
                 return success;
             }
             if (String.IsNullOrEmpty(Zip.Text))
             {
                 success = false;
-                Error.Text += "Err: Please give us your zip code.";
+                Error.Text = "Err: Please give us your zip code.";
                 return success;
             }
             if (String.IsNullOrEmpty(State.Text) || State.Text.Length > 2)
             {
                 success = false;
-                Error.Text += "Err: State code invalid or empty. Ex: GA";
+                Error.Text = "Err: State code invalid or empty. Ex: GA";
                 return success;
             }
             if (String.IsNullOrEmpty(Country.Text) || Country.Text.Length > 4)
             {
                 success = false;
-                Error.Text += "Err: Country code invalid or empty. Ex: US";
+                Error.Text = "Err: Country code invalid or empty. Ex: US";
                 return success;
             }
 
@@ -169,7 +169,6 @@ namespace puppies
             payer.payment_method = "credit_card";
 
             //payment info
-            //This isnt working... maybe need to use the old paypal version
             payment.intent = "sale";
             payment.payer = payer;
             payment.transactions = transactions;
