@@ -93,7 +93,9 @@
                             data[i].amount + ' </td> </tr> ';
                         }
                     }
-                    document.getElementById("OrdersList").innerHTML += '</tbody>'
+                    if (bFirstOrderFound) {
+                        document.getElementById("OrdersList").innerHTML += '</tbody>';
+                    }
                     //TODO: markup the products dynamicly by looping through returned object
                     //and putting into the page as html
                 },
