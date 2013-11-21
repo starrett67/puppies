@@ -83,7 +83,7 @@
                         if (data[i].user_id == response.id) {
                             //User has order!
                             products_purchased = data[i].products_purchased;
-                            console.log(products_purchased);
+                            console.log(products_purchased + ', outer');
                             if (!bFirstOrderFound) {
                                 bFirstOrderFound = true;
                                 document.getElementById("OrdersList").innerHTML += '<tbody>';
@@ -99,7 +99,7 @@
                                     //ZOMG A LOOP IN A LOOP
                                     for (var k = 0; k < resp.length; k++) {
                                         //ZOMG A LOOP IN A LOOP IN A LOOP
-                                        console.log(products_purchased);
+                                        console.log(products_purchased + ', inner');
                                         for (var j = 0; j < data[i].products_purchased.length; j++) {
                                             if (data[i].products_purchased[j] == resp[k].products_id) {
                                                 console.log("found a match");
