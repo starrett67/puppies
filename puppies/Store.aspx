@@ -79,6 +79,7 @@
      */
      var publicKeyHeader = 'X-StackMob-API-Key-ae924762-6432-41d7-88ca-5f034661e46b';
      var requestHeaders = {};
+     var requestBody = {};
      requestHeaders['Accept'] = 'application/vnd.stackmob+json; version=0';
      requestHeaders[publicKeyHeader] = 1;
      requestHeaders['Range'] = 'objects=0-20'; //set pagination to first 10
@@ -88,15 +89,16 @@
          var productsPurchase = [];
          productsPurchase.push(productId);
          FB.api('/me', function (response) {
+
+             requestBody['amount'] = price;
+             requestBody['user_id'] = response.id;
+             requestBody['products_purchased'] = productsPurchase;
+
              $.ajax({
                 url: 'https://api.stackmob.com/orders',
                 headers: requestHeaders,
                 type: 'Post',
-                body: {
-                        "amount": price,
-                        //"products_purchased": productId,
-                        "user_id": response.id
-                       },
+                body: requestBody,
                 success: function (data){
                     console.log(data);
                 },
