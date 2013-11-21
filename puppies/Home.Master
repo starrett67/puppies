@@ -33,7 +33,7 @@
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
-           <span class=" glyphicon .glyphicon-shopping-cart"> </span>
+           <span class=" glyphicon .glyphicon-shopping-cart" style="color:White;"> </span>
         </div>
         <!-- /.container -->
     </nav>
