@@ -91,29 +91,28 @@
                             document.getElementById("OrdersList").innerHTML += '<tr> <td class="field-label col-xs-2 active"> ' +
                                 'Order ID: ' + data[i].orders_id + '</label> </td> <td class="col-md-9">';
                             //ZOMG AJAX IN A AJAX
-                            (function (d) {
-                                $.ajax({
-                                    url: 'https://api.stackmob.com/Products',
-                                    headers: requestHeaders, //set the headers
-                                    type: 'GET',
-                                    success: function (resp, textStatus, xhr) {
-                                        //ZOMG A LOOP IN A LOOP
-                                        for (var k = 0; k < resp.length; k++) {
-                                            //ZOMG A LOOP IN A LOOP IN A LOOP
-                                            console.log(products_purchased + ', inner');
-                                            for (var j = 0; j < data[i].products_purchased.length; j++) {
-                                                if (data[i].products_purchased[j] == resp[k].products_id) {
-                                                    console.log("found a match");
-                                                    document.getElementById("OrdersList").innerHTML += resp[k].Name + '\n';
-                                                }
+                            $.ajax({
+                                url: 'https://api.stackmob.com/Products',
+                                headers: requestHeaders, //set the headers
+                                type: 'GET',
+                                async: false,
+                                success: function (resp, textStatus, xhr) {
+                                    //ZOMG A LOOP IN A LOOP
+                                    for (var k = 0; k < resp.length; k++) {
+                                        //ZOMG A LOOP IN A LOOP IN A LOOP
+                                        console.log(products_purchased + ', inner');
+                                        for (var j = 0; j < data[i].products_purchased.length; j++) {
+                                            if (data[i].products_purchased[j] == resp[k].products_id) {
+                                                console.log("found a match");
+                                                document.getElementById("OrdersList").innerHTML += resp[k].Name + '\n';
                                             }
                                         }
-                                    },
-                                    error: function (xhr, textStatus, error) {
-                                        console.log(error);
                                     }
-                                });
-                            } (document))
+                                },
+                                error: function (xhr, textStatus, error) {
+                                    console.log(error);
+                                }
+                            });
                             document.getElementById("OrdersList").innerHTML += '</td> <td class="col-md-1"> ' +
                                 data[i].amount + ' </td> </tr> ';
                         }
