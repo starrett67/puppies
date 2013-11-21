@@ -1,12 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" Inherits="System.Web.Mvc.ViewPage" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="PuppyContent" runat="server">
- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
- <script src="/Scripts/YoutubeAuth.js" type="text/javascript"></script>
- <script src="/Scripts/YoutubeSearch.js" type="text/javascript"></script>
- <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady" type="text/javascript"></script>
- <script type="text/javascript">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+    <script src="/Scripts/YoutubeAuth.js" type="text/javascript"></script>
+    <script src="/Scripts/YoutubeSearch.js" type="text/javascript"></script>
+    <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady" type="text/javascript"></script>
+    <script type="text/javascript">
 
  window.fbAsyncInit = function () {
             FB.init({
@@ -84,7 +85,8 @@
      fillStorePage();
 
      function buyPuppy(productId, price) {
-         var productsPurchase = { productId };
+         var productsPurchase = [];
+         productsPurchase.push(productId);
          FB.api('/me', function (response) {
              $.ajax({
                 url: 'https://api.stackmob.com/orders',
@@ -150,22 +152,22 @@
          console.log("exit");
      }
  
- </script>
- <div id="container" class="container">
+    </script>
+    <div id="container" class="container">
         <div class="row" style="height: 60px;">
         </div>
-     <div class="row">
-         <div class="col-lg-12">
-             <h3>
-                 Popular Dogs</h3>
-         </div>
-     </div>
-     <!-- /.row -->
-     <div id="divLogin-link">
-        <a href="#" id="login-link">please login first</a>
-     </div>
-     <div class="row text-center">
-     <!--    <div class="col-lg-3 col-md-6 hero-feature">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>
+                    Popular Dogs</h3>
+            </div>
+        </div>
+        <!-- /.row -->
+        <div id="divLogin-link">
+            <a href="#" id="login-link">please login first</a>
+        </div>
+        <div class="row text-center">
+            <!--    <div class="col-lg-3 col-md-6 hero-feature">
              <div class="thumbnail">
                  <img src="http://farm5.staticflickr.com/4081/4883281674_8428f07e53_z.jpg" alt="">
                  <div class="caption">
@@ -224,10 +226,10 @@
                  </div>
              </div>
          </div> -->
-     </div>
-     <!-- /.row -->
-     <hr />
-     <!--<div class="row text-center">
+        </div>
+        <!-- /.row -->
+        <hr />
+        <!--<div class="row text-center">
          <div class="col-lg-3 col-md-6 hero-feature">
              <div class="thumbnail">
                  <img src="http://farm5.staticflickr.com/4081/4883281674_8428f07e53_z.jpg" alt="">
@@ -285,6 +287,6 @@
              </div>
          </div>
      </div>-->
-     <!-- /.row -->
-     </div>
+        <!-- /.row -->
+    </div>
 </asp:Content>
