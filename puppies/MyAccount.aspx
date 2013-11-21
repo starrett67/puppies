@@ -83,7 +83,7 @@
             FB.api('/me', function (response) {
                 console.log('Good to see you, ' + response.name + '.');
                 console.log(response);
-                document.getElementById("OrdersHeader").innerHTML = response.name + " Orders: ";
+                //document.getElementById("OrdersHeader").innerHTML = response.name + " Orders: ";
                 var OrderNumbers = [];
                 var OrderDescription = [];
                 var OrderAmount = [];
