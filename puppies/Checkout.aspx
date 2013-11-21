@@ -100,7 +100,10 @@
                                         for (var j = 0; j < data[i].products_purchased.length; j++) {
                                             if (data[i].products_purchased[j] == resp[k].products_id) {
                                                 console.log("found a match");
-                                                productsOrdered += resp[k].Name + ' ';
+                                                if (productsOrdered != "") {
+                                                    productsOrdered += ", ";
+                                                }
+                                                productsOrdered += resp[k].Name;
                                             }
                                         }
                                     }
