@@ -193,5 +193,8 @@
                     </table>
                 </div>
             </div>
-            </div>
+</div>
+<div id="PaymentContainer">
+    <PaymentControl:PaymentStart runat="server"></PaymentControl:PaymentStart>
+</div>
 </asp:Content>
