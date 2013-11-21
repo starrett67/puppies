@@ -4,6 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using PayPal;
+using PayPal.Api.Payments;
+using Newtonsoft;
+using log4net;
 
 namespace puppies
 {
@@ -23,6 +27,10 @@ namespace puppies
             for (int i = 13; i < 25; i++)
             {
                 ExpYear.Items.Add("20" + i);
+            }
+            if (!Page.IsPostBack)
+            {
+                Error.Text = "";
             }
         }
 
@@ -98,6 +106,75 @@ namespace puppies
                 return success;
             }
 
+            return success;
+        }
+
+        public bool createPaypalPayment()
+        {
+            bool success = false;
+            String ClientID = "";//todo get from drew
+            String Secret = ""; //todo get from drew
+            CreditCard creditCard = new CreditCard();
+            Address bAddress = new Address();
+            Amount amount = new Amount();
+            AmountDetails amountDetails = new AmountDetails();
+            Payer payer = new Payer();
+            PayPal.Api.Payments.Payment payment = new PayPal.Api.Payments.Payment();
+            List<Transaction> transactions = new List<Transaction>();
+            Transaction transaction = new Transaction();
+            List<FundingInstrument> fundingInstruments = new List<FundingInstrument>();
+            FundingInstrument fundingInstrument = new FundingInstrument();
+            OAuthTokenCredential tokenCredentials = new OAuthTokenCredential(ClientID, Secret);
+
+            String accessToken = tokenCredentials.GetAccessToken();
+
+            //billing address info
+            bAddress.line1 = Address.Text;
+            bAddress.city = City.Text;
+            bAddress.country_code = Country.Text;
+            bAddress.postal_code = Zip.Text;
+            bAddress.state = State.Text;
+
+            //Credit card info
+            creditCard.number = CardNumber.Text;
+            creditCard.type = CardType.SelectedItem.Text;
+            creditCard.expire_month = ExpMonth.SelectedItem.Text;
+            creditCard.expire_year = ExpYear.SelectedItem.Text;
+            creditCard.cvv2 = CvvCode.Text;
+            creditCard.first_name = FirstName.Text;
+            creditCard.last_name = LastName.Text;
+            creditCard.billing_address = bAddress;
+            
+            //Amount Details
+            amountDetails.subtotal = "";
+            amountDetails.tax = "0.00";
+            amountDetails.shipping = "0.00";
+
+            //Amount info
+            amount.total = "0.00";
+            amount.currency = "USD";
+            amount.details = amountDetails;
+
+            //transaction info
+            transaction.amount = amount;
+            transaction.description = "Puppyrus purchase";
+            transactions.Add(transaction);
+
+            //funding info
+            fundingInstrument.credit_card = creditCard;
+            fundingInstruments.Add(fundingInstrument);
+
+            //payer info
+            payer.funding_instruments = fundingInstruments;
+            payer.payment_method = "credit_card";
+
+            //payment info
+            //This isnt working... maybe need to use the old paypal version
+            payment.intent = "sale";
+            payment.payer = payer;
+            payment.transactions = transactions;
+
+            PayPal.Api.Payments.Payment createdPayment = payment.Create(accessToken);
             return success;
         }
     }
