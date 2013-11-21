@@ -104,6 +104,7 @@
     }
     function getPuppiesOrdered(arrOfIds) {
         var productString = ""
+        console.log(arrOfIds);
         $.ajax({
             url: 'https://api.stackmob.com/Products',
             headers: requestHeaders, //set the headers
