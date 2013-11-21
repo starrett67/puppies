@@ -8,7 +8,7 @@
     var requestHeaders = {};
     requestHeaders['Accept'] = 'application/vnd.stackmob+json; version=0';
     requestHeaders[publicKeyHeader] = 1;
-    requestHeaders['Range'] = 'objects=0-9'; //set pagination to first 10
+    requestHeaders['Range'] = 'objects=0-49'; //set pagination to first 10
 
     window.fbAsyncInit = function () {
         FB.init({
@@ -96,6 +96,7 @@
                                     //ZOMG A LOOP IN A LOOP
                                     for (var k = 0; k < resp.length; k++) {
                                         //ZOMG A LOOP IN A LOOP IN A LOOP
+                                        console.log(data[i]);
                                         for (var j = 0; j < data[i].products_purchased.length; j++) {
                                             if (data[i].products_purchased[j] == resp[k].products_id) {
                                                 console.log("found a match");
