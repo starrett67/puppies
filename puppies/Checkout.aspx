@@ -71,7 +71,6 @@
             console.log('Good to see you, ' + response.name + '.');
             console.log(response);
             document.getElementById("OrdersHeader").innerHTML = response.name + " Orders: ";
-            var products_purchased;
             $.ajax({
                 url: 'https://api.stackmob.com/orders',
                 headers: requestHeaders, //set the headers
@@ -82,10 +81,9 @@
                     for (var i = 0; i < data.length; i++) {
                         if (data[i].user_id == response.id) {
                             //User has order!
-                            products_purchased = data[i].products_purchased;
-                            console.log(products_purchased + ', outer');
                             if (!bFirstOrderFound) {
                                 bFirstOrderFound = true;
+                                alert("Adding body");
                                 document.getElementById("OrdersList").innerHTML += '<tbody>';
                             }
                             document.getElementById("OrdersList").innerHTML += '<tr> <td class="field-label col-xs-2 active"> ' +
@@ -100,11 +98,10 @@
                                     //ZOMG A LOOP IN A LOOP
                                     for (var k = 0; k < resp.length; k++) {
                                         //ZOMG A LOOP IN A LOOP IN A LOOP
-                                        console.log(products_purchased + ', inner');
                                         for (var j = 0; j < data[i].products_purchased.length; j++) {
                                             if (data[i].products_purchased[j] == resp[k].products_id) {
                                                 console.log("found a match");
-                                                document.getElementById("OrdersList").innerHTML += resp[k].Name + '\n';
+                                                document.getElementById("OrdersList").innerHTML += resp[k].Name + ', ';
                                             }
                                         }
                                     }
