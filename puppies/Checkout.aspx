@@ -88,6 +88,7 @@
                             document.getElementById("OrdersList").innerHTML += '<tr> <td class="field-label col-xs-2 active"> ' +
                                 'Order ID: ' + data[i].orders_id + '</label> </td> <td class="col-md-9">';
                             var puppiesOrdered = getPuppiesOrdered(data[i].products_purchased);
+                            console.log(puppiesOrdered);
                             document.getElementById("OrdersList").innerHTML += puppiesOrdered + '</td> <td class="col-md-1"> ' +
                             data[i].amount + ' </td> </tr> ';
                         }
@@ -110,7 +111,6 @@
             type: 'GET',
             success: function (data, textStatus, xhr) {
                 for (var i = 0; i < data.length; i++) {
-                    console.log(data);
                     for (var j = 0; j < arrOfIds.length; j++) {
                         if (arrOfIds[j] == data[i].products_id) {
                             console.log("found a match");
