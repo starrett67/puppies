@@ -32,6 +32,7 @@
                     <li><a href="Blog.aspx">Blog</a></li>
                 </ul>
                 <span class="glyphicon glyphicon-shopping-cart" style="color:White;"> </span>
+                <i class="icon-ok icon-white"></i>
             </div>
             <!-- /.navbar-collapse -->
            
