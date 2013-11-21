@@ -36,6 +36,12 @@
      requestHeaders[publicKeyHeader] = 1;
      requestHeaders['Range'] = 'objects=0-20'; //set pagination to first 10
      fillStorePage();
+
+     function buyPuppy(productId) {
+         alert("Buy Function hit");
+        
+     }
+
      function fillStorePage() {
          $.ajax({
              url: 'https://api.stackmob.com/Products',
@@ -54,15 +60,16 @@
                      for (var j = 0; j < temp.length; j++) {
                          jName += temp[j];
                      }
-                     var Javascript = "Javascript:search('" + jName + "', 'SearchResults" + jName + "');"
+                     var Javascript = "Javascript:search('" + jName + "', 'SearchResults" + jName + "');";
+                     var buyJavascript = "Javascript:buyPuppy('" + data[i].products_id + "');";
                      console.log(Javascript);
                      if (i % 4 == 0 || i == 0) {
                          //need a new row
                          document.getElementById("container").innerHTML += '<div class="row text-center">';
                      }
                      document.getElementById("container").innerHTML += '<div class="col-lg-3 col-md-6 hero-feature"><div class="thumbnail">' +
-                        '<img src="' + imgSource + '" /><div class="caption"><h3>' + Name + '</h3><p>' + description + '<p id="' + Name + '">' +
-                        '<a href="#" class="btn btn-primary">Buy Now!</a> <a href="' + Javascript + '" class="btn btn-default"> Youtube </a>' +
+                        '<img src="' + imgSource + '" /><div class="caption"><h3>' + Name + ' - ' + price + '</h3><p>' + description + '<p id="' + Name + '">' +
+                        '<a href="' + buyJavascript + '" class="btn btn-primary">Buy Now!</a> <a href="' + Javascript + '" class="btn btn-default"> Youtube </a>' +
                         '<div id="SearchResults' + jName + '"></div></div></div>'
                      if (((i + 1) % 4 == 0 && i >= 3) || (i + 1) == data.length) {
                          document.getElementById("container").innerHTML += '</div>';
