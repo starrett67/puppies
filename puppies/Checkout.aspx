@@ -123,6 +123,13 @@
             console.log(OrderNumbers);
             console.log(OrderDescription);
             console.log(OrderAmount);
+            document.getElementById("OrdersList").innerHTML += '<tbody>';
+            for (var i = 0; i < OrderNumbers.length; i++) {
+                document.getElementById("OrdersList").innerHTML += '<tr> <td class="field-label col-xs-2 active"> <label> ' +
+                'Order Number: ' + OrderNumbers[i] + '</label> </td> <td class="col-md-9"> ' + OrderDescription[i] +
+                ' </td> <td class="col-md-1"> ' + OrderAmount[i] + ' </td> </tr>';
+            }
+            document.getElementById("OrdersList").innerHTML += '</tbody>';
         });
     }
     function getPuppiesOrdered(arrOfIds) {
