@@ -72,11 +72,27 @@
             console.log(response);
             document.getElementById("OrdersHeader").innerHTML = response.name + " Orders: ";
             $.ajax({
-                url: 'https://api.stackmob.com/Products',
+                url: 'https://api.stackmob.com/orders',
                 headers: requestHeaders, //set the headers
                 type: 'GET',
                 success: function (data, textStatus, xhr) {
                     console.debug(data);
+                    var bFirstOrderFound = false;
+                    for (var i = 0; i < data.length; i++) {
+                        if (data[i].user_id == response.id) {
+                            //User has order!
+                            if (!bFirstOrderFound) {
+                                bFirstOrderFound = true;
+                                document.getElementById("OrdersList").innerHTML += '<tbody>';
+                            }
+                            document.getElementById("OrdersList").innerHTML += '<tr> <td class="field-label col-xs-2 active"> ' +
+                                'Order ID: ' + data[i].orders_id + '</label> </td> <td class="col-md-9">';
+                            var puppiesOrdered = getPuppiesOrdered(data[i].products_purchased);
+                            document.getElementById("OrdersList").innerHTML += puppiesOrdered + '</td> <td class="col-md-1"> ' +
+                            data[i].amount + ' </td> </tr> ';
+                        }
+                    }
+                    document.getElementById("OrdersList").innerHTML += '</tbody>'
                     //TODO: markup the products dynamicly by looping through returned object
                     //and putting into the page as html
                 },
@@ -86,13 +102,34 @@
             });
         });
     }
+    function getPuppiesOrdered(arrOfIds) {
+        var productString = ""
+        $.ajax({
+            url: 'https://api.stackmob.com/Products',
+            headers: requestHeaders, //set the headers
+            type: 'GET',
+            success: function (data, textStatus, xhr) {
+                for (var i = 0; i < data.length; i++) {
+                    for (var j = 0; j < arrOfIds.length; j++) {
+                        if (arrOfIds[j] == data[i].products_id) {
+                            productString += data[i].Name + '\n';
+                        }
+                    }
+                }
+                return productString;
+            },
+            error: function (xhr, textStatus, error) {
+                console.log(error);
+            }
+        });
+    }
 
 </script>
 <div class="row">
             <div style="margin: 10px;" class="col-lg-12 well">
                 <h2 id="OrdersHeader">
                     Your Orders:</h2>
-                <table id="OrdersList class="table table-striped">
+                <table id="OrdersList" class="table table-striped">
                     <thead>
                         <tr>
                             <th class="field-label col-xs-2 active">
@@ -108,9 +145,6 @@
                             </th>
                         </tr>
                     </thead>
-                    <tbody>
-                        
-                    </tbody>
                 </table>
             </div>
         </div>
