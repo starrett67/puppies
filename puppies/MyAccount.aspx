@@ -5,6 +5,13 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="PuppyContent" runat="server">
     <script>
+        var publicKeyHeader = 'X-StackMob-API-Key-ae924762-6432-41d7-88ca-5f034661e46b';
+        var requestHeaders = {};
+        requestHeaders['Accept'] = 'application/vnd.stackmob+json; version=0';
+        requestHeaders[publicKeyHeader] = 1;
+        requestHeaders['Range'] = 'objects=0-49'; //set pagination to first 10
+
+
         window.fbAsyncInit = function () {
             FB.init({
                 appId: '655072947848872', // App ID
@@ -79,6 +86,8 @@
                 fillOrdersTable();
             });
         }
+
+
         function fillOrdersTable() {
             FB.api('/me', function (response) {
                 console.log('Good to see you, ' + response.name + '.');
