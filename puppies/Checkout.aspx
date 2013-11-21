@@ -83,7 +83,7 @@
                     console.debug(data);
                     var bFirstOrderFound = false;
                     for (var i = 0; i < data.length; i++) {
-                        if (data[i].user_id == response.id) {
+                        if (data[i].user_id == response.id && !data[i].purchased) {
                             //User has an order
                             OrderNumbers.push(data[i].orders_id);
                             //ZOMG AJAX IN A AJAX
