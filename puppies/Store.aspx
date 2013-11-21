@@ -94,7 +94,7 @@
                 type: 'Post',
                 body: {
                         "amount": price,
-                        "products_purchased": productsPurchase,
+                        "products_purchased": productId,
                         "user_id": response.id
                        },
                 success: function (data){
@@ -135,7 +135,7 @@
                          document.getElementById("container").innerHTML += '<div class="row text-center">';
                      }
                      document.getElementById("container").innerHTML += '<div class="col-lg-3 col-md-6 hero-feature"><div class="thumbnail">' +
-                        '<img src="' + imgSource + '" /><div class="caption"><h3>' + Name + ' - ' + price + '</h3><p>' + description + '<p id="' + Name + '">' +
+                        '<img src="' + imgSource + '" /><div class="caption"><h3>' + Name + ' - $' + price + '</h3><p>' + description + '<p id="' + Name + '">' +
                         '<a href="' + buyJavascript + '" class="btn btn-primary">Buy Now!</a> <a href="' + Javascript + '" class="btn btn-default"> Youtube </a>' +
                         '<div id="SearchResults' + jName + '"></div></div></div>'
                      if (((i + 1) % 4 == 0 && i >= 3) || (i + 1) == data.length) {
