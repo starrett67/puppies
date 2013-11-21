@@ -91,7 +91,7 @@
                             document.getElementById("OrdersList").innerHTML += '<tr> <td class="field-label col-xs-2 active"> ' +
                                 'Order ID: ' + data[i].orders_id + '</label> </td> <td class="col-md-9">';
                             //ZOMG AJAX IN A AJAX
-                            function () {
+                            (function (d) {
                                 $.ajax({
                                     url: 'https://api.stackmob.com/Products',
                                     headers: requestHeaders, //set the headers
@@ -113,7 +113,7 @@
                                         console.log(error);
                                     }
                                 });
-                            }
+                            } (document))
                             document.getElementById("OrdersList").innerHTML += '</td> <td class="col-md-1"> ' +
                                 data[i].amount + ' </td> </tr> ';
                         }
