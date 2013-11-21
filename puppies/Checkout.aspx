@@ -103,8 +103,6 @@
                                             }
                                         }
                                     }
-                                    console.log(productString)
-                                    return productString;
                                 },
                                 error: function (xhr, textStatus, error) {
                                     console.log(error);
