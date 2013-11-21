@@ -9,6 +9,9 @@
     <link href="Content/bootstrap.css" rel="stylesheet" type="text/css" />
     <script src="Scripts/bootstrap.js" type="text/javascript"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <style type="text/css">
+        white{color: White;}
+    </style>
 </head>
 <body>
     
@@ -31,7 +34,7 @@
                     <li><a href="Login.aspx">Login</a></li>
                     <li><a href="Blog.aspx">Blog</a></li>
                 </ul>
-                <span class="glyphicon glyphicon-shopping-cart" style="color:White;"> </span>
+                <span class="glyphicon glyphicon-shopping-cart white" > </span>
                 <i class="icon-ok icon-white"></i>
             </div>
             <!-- /.navbar-collapse -->
