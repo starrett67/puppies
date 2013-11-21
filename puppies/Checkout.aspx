@@ -111,6 +111,7 @@
             type: 'GET',
             success: function (data, textStatus, xhr) {
                 for (var i = 0; i < data.length; i++) {
+                    console.log(data[i].products_id);
                     for (var j = 0; j < arrOfIds.length; j++) {
                         if (arrOfIds[j] == data[i].products_id) {
                             productString += data[i].Name + '\n';
