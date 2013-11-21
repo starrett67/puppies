@@ -112,8 +112,8 @@ namespace puppies
         public bool createPaypalPayment()
         {
             bool success = false;
-            String ClientID = "";//todo get from drew
-            String Secret = ""; //todo get from drew
+            String ClientID = "ATBTSxBIPTdaG_61_1waSimujWIDYHceqjlTFqwF7cu8Fuf6vBkq3tDGLDyp";//todo get from drew
+            String Secret = "EMRGvBC0nnC1NxAtgOYXU_rKsfP_pZcG4ymjIiNzpO71zXWN1vvGwiax1b5Y"; //todo get from drew
             CreditCard creditCard = new CreditCard();
             Address bAddress = new Address();
             Amount amount = new Amount();
