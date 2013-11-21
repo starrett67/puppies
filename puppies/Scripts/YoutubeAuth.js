@@ -35,7 +35,6 @@ function handleAuthResult(authResult) {
     } else {
         // Make the #login-link clickable, and attempt a non-immediate OAuth 2 loclient flow.
         // The current function will be called when that flow is complete.
-        $('#divLogin-link').toggle();
         $('#login-link').click(function () {
             gapi.auth.authorize({
                 client_id: OAUTH2_CLIENT_ID,
