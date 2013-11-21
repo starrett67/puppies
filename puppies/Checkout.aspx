@@ -71,23 +71,21 @@
             console.log('Good to see you, ' + response.name + '.');
             console.log(response);
             document.getElementById("OrdersHeader").innerHTML = response.name + " Orders: ";
+            var OrderNumbers = [];
+            var OrderDescription = [];
+            var OrderAmount = [];
             $.ajax({
                 url: 'https://api.stackmob.com/orders',
                 headers: requestHeaders, //set the headers
                 type: 'GET',
+                async: false,
                 success: function (data, textStatus, xhr) {
                     console.debug(data);
                     var bFirstOrderFound = false;
                     for (var i = 0; i < data.length; i++) {
                         if (data[i].user_id == response.id) {
-                            //User has order!
-                            if (!bFirstOrderFound) {
-                                bFirstOrderFound = true;
-                                alert("Adding body");
-                                document.getElementById("OrdersList").innerHTML += '<tbody>';
-                            }
-                            document.getElementById("OrdersList").innerHTML += '<tr> <td class="field-label col-xs-2 active"> ' +
-                                'Order ID: ' + data[i].orders_id + '</label> </td> <td class="col-md-9">';
+                            //User has an order
+                            OrderNumbers.push(data[i].orders_id);
                             //ZOMG AJAX IN A AJAX
                             $.ajax({
                                 url: 'https://api.stackmob.com/Products',
@@ -96,26 +94,24 @@
                                 async: false,
                                 success: function (resp, textStatus, xhr) {
                                     //ZOMG A LOOP IN A LOOP
+                                    var productsOrdered = "";
                                     for (var k = 0; k < resp.length; k++) {
                                         //ZOMG A LOOP IN A LOOP IN A LOOP
                                         for (var j = 0; j < data[i].products_purchased.length; j++) {
                                             if (data[i].products_purchased[j] == resp[k].products_id) {
                                                 console.log("found a match");
-                                                document.getElementById("OrdersList").innerHTML += resp[k].Name + ', ';
+                                                productsOrdered += resp[k].Name + ' ';
                                             }
                                         }
                                     }
+                                    OrderDescription.push(productsOrdered);
                                 },
                                 error: function (xhr, textStatus, error) {
                                     console.log(error);
                                 }
                             });
-                            document.getElementById("OrdersList").innerHTML += '</td> <td class="col-md-1"> ' +
-                                data[i].amount + ' </td> </tr> ';
+                            OrderAmount.push(data[i].amount);
                         }
-                    }
-                    if (bFirstOrderFound) {
-                        document.getElementById("OrdersList").innerHTML += '</tbody>';
                     }
                     //TODO: markup the products dynamicly by looping through returned object
                     //and putting into the page as html
@@ -124,6 +120,9 @@
                     console.debug(error);
                 }
             });
+            console.log(OrderNumbers);
+            console.log(OrderDescription);
+            console.log(OrderAmount);
         });
     }
     function getPuppiesOrdered(arrOfIds) {
