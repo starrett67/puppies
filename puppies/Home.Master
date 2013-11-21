@@ -42,11 +42,9 @@
         </div>
         <!-- /.container -->
     </nav>
-    <form id="form1" runat="server">
     <div>
         <asp:ContentPlaceHolder ID="PuppyContent" runat="server">
         </asp:ContentPlaceHolder>
     </div>
-    </form>
 </body>
 </html>
