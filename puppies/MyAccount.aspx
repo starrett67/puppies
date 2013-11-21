@@ -94,7 +94,7 @@
                                         First Name:
                                     </td>
                                     <td style="margin-left: 20px;">
-                                        <input id="fName" type="text" />
+                                        <input id="fName" type="text" readonly/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -102,7 +102,7 @@
                                         Last Name:
                                     </td>
                                     <td style="margin-left: 20px;">
-                                        <input id="lName" type="text" />
+                                        <input id="lName" type="text" readonly/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -110,7 +110,7 @@
                                         UserName:
                                     </td>
                                     <td style="margin-left: 20px;">
-                                        <input id="UserName" type="text" />
+                                        <input id="UserName" type="text" readonly />
                                     </td>
                                 </tr>
                                 <tr>
@@ -118,7 +118,7 @@
                                         Email:
                                     </td>
                                     <td style="margin-left: 20px;">
-                                        <input id="Email" type="text" />
+                                        <input id="Email" type="text" readonly />
                                     </td>
                                 </tr>
                                 <tr>
@@ -126,7 +126,7 @@
                                         Location:
                                     </td>
                                     <td>
-                                        <input id="Location" type="text" />
+                                        <input id="Location" type="text" readonly />
                                     </td>
                                 </tr>
                             </table>
