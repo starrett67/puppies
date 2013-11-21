@@ -160,27 +160,31 @@
     }
 
 </script>
-<div class="row">
-            <div style="margin: 10px;" class="col-lg-12 well">
-                <h2 id="OrdersHeader">
-                    Your Orders:</h2>
-                <table id="OrdersList" class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th class="field-label col-xs-2 active">
-                                <label>
-                                    Order #</label>
-                            </th>
-                            <th class="col-md-9">
-                                <label>
-                                    Order Details</label>
-                            </th>
-                            <th class="col-md-1">
-                                Amount
-                            </th>
-                        </tr>
-                    </thead>
-                </table>
-            </div>
+<div id="CheckoutContainer" class="container">
+        <div class="row" style="height: 60px;">
         </div>
+    <div class="row">
+                <div style="margin: 10px;" class="col-lg-12 well">
+                    <h2 id="OrdersHeader">
+                        Your Orders:</h2>
+                    <table id="OrdersList" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th class="field-label col-xs-2 active">
+                                    <label>
+                                        Order #</label>
+                                </th>
+                                <th class="col-md-9">
+                                    <label>
+                                        Order Details</label>
+                                </th>
+                                <th class="col-md-1">
+                                    Amount
+                                </th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+            </div>
 </asp:Content>
