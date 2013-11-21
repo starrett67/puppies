@@ -61,5 +61,7 @@
             </td>
         </tr>
     </table>
-    <asp:Button ID="Submit" runat="server" Text="Confirm" />
+    <asp:Label ID="Error" runat="server" ForeColor="Red" Text="Err: " Visible="false"></asp:Label>
+    <br />
+    <asp:Button ID="Submit" runat="server" Text="Confirm" onclick="Submit_Click" />
 </form>
