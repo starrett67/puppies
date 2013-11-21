@@ -265,7 +265,7 @@
                             </th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <!--<tbody>
                         <tr>
                             <td class="field-label col-xs-2 active">
                                 <label>
@@ -302,7 +302,7 @@
                                 $20
                             </td>
                         </tr>
-                    </tbody>
+                    </tbody>-->
                 </table>
             </div>
         </div>
