@@ -65,7 +65,9 @@
         ref.parentNode.insertBefore(js, ref);
     } (document));
 
-
+    function showPaymentInfo() {
+        document.getElementById("PaymentContainer").style.display = 'block';
+     }
 
     function fillOrdersTable() {
         FB.api('/me', function (response) {
@@ -194,7 +196,7 @@
                 </div>
             </div>
 </div>
-<div id="PaymentContainer">
+<div id="PaymentContainer" class="container" style="display: none">
     <PaymentControl:PaymentStart runat="server"></PaymentControl:PaymentStart>
 </div>
 </asp:Content>
