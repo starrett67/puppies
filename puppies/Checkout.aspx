@@ -108,8 +108,8 @@
                                     console.log(error);
                                 }
                             });
-                            document.getElementById("OrdersList").innerHTML += puppiesOrdered + '</td> <td class="col-md-1"> ' +
-                            data[i].amount + ' </td> </tr> ';
+                            document.getElementById("OrdersList").innerHTML += '</td> <td class="col-md-1"> ' +
+                                data[i].amount + ' </td> </tr> ';
                         }
                     }
                     if (bFirstOrderFound) {
