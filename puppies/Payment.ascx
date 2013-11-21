@@ -1,4 +1,12 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Payment.ascx.cs" Inherits="puppies.Payment" %>
+<script type="text/javascript">
+    $('#Submit').click(function( event ) {
+        if( $('#Error').val != "")
+        {
+            event.preventDefault();
+        }
+    }
+</script>
 <form id="PaymentInfo" runat="server">
     <table>
         <tr>
@@ -61,7 +69,7 @@
             </td>
         </tr>
     </table>
-    <asp:Label ID="Error" runat="server" ForeColor="Red" Text="Err: " Visible="false"></asp:Label>
+    <asp:Label ID="Error" runat="server" ForeColor="Red" ClientIDMode="Static" Visible="false"></asp:Label>
     <br />
-    <asp:Button ID="Submit" runat="server" Text="Confirm" onclick="Submit_Click" />
+    <asp:Button ID="Submit" runat="server" Text="Confirm" ClientIDMode="Static" onclick="Submit_Click" />
 </form>
