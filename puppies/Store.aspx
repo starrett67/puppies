@@ -7,6 +7,59 @@
  <script src="/Scripts/YoutubeSearch.js" type="text/javascript"></script>
  <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady" type="text/javascript"></script>
  <script type="text/javascript">
+
+ window.fbAsyncInit = function () {
+            FB.init({
+                appId: '655072947848872', // App ID
+                channelUrl: '//puppiesrus.azurewebsites.net/channel.html', // Channel File
+                status: true, // check login status
+                cookie: true, // enable cookies to allow the server to access the session
+                xfbml: true  // parse XFBML
+            });
+
+            // Here we subscribe to the auth.authResponseChange JavaScript event. This event is fired
+            // for any authentication related change, such as login, logout or session refresh. This means that
+            // whenever someone who was previously logged out tries to log in again, the correct case below 
+            // will be handled. 
+            FB.Event.subscribe('auth.authResponseChange', function (response) {
+                // Here we specify what we do with the response anytime this event occurs. 
+                console.log(response.status);
+                if (response.status === 'connected') {
+                    // The response object is returned with a status field that lets the app know the current
+                    // login status of the person. In this case, we're handling the situation where they 
+                    // have logged in to the app.
+                    fillForm();
+                } else if (response.status === 'not_authorized') {
+                    // In this case, the person is logged into Facebook, but not into the app, so we call
+                    // FB.login() to prompt them to do so. 
+                    // In real-life usage, you wouldn't want to immediately prompt someone to login 
+                    // like this, for two reasons:
+                    // (1) JavaScript created popup windows are blocked by most browsers unless they 
+                    // result from direct interaction from people using the app (such as a mouse click)
+                    // (2) it is a bad experience to be continually prompted to login upon page load.
+                    document.getElementById("ErrorMessage").innerHTML += "<br>Please log in to facebook first";
+                } else {
+                    // In this case, the person is not logged into Facebook, so we call the login() 
+                    // function to prompt them to do so. Note that at this stage there is no indication
+                    // of whether they are logged into the app. If they aren't then they'll see the Login
+                    // dialog right after they log in to Facebook. 
+                    // The same caveats as above apply to the FB.login() call here.
+                    document.getElementById("ErrorMessage").innerHTML += "<br>Please log in to facebook first";
+                }
+            });
+        };
+        console.log(document.getElementById("fName"));
+        if (document.getElementById("fName") == null) {
+            //document.getElementById("AccountContainer").innerHTML += "<font color='red'><h2>Please login first</h2></font>";  fix this
+        }
+        // Load the SDK asynchronously
+        (function (d) {
+            var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement('script'); js.id = id; js.async = true;
+            js.src = "//connect.facebook.net/en_US/all.js";
+            ref.parentNode.insertBefore(js, ref);
+        } (document));
      /*
      We want to prepare the Request headers we're going to send to StackMob.  It should look like:
 
@@ -37,9 +90,28 @@
      requestHeaders['Range'] = 'objects=0-20'; //set pagination to first 10
      fillStorePage();
 
-     function buyPuppy(productId) {
-         alert("Buy Function hit");
-        
+     function buyPuppy(productId, price) {
+         var productsPurchase = { productId };
+         FB.api('/me', function (response) {
+             $.ajax({
+                url: 'https://api.stackmob.com/orders',
+                headers: requestHeaders,
+                type: 'Post',
+                body: {
+                        "amount": price,
+                        "products_purchased": productsPurchase,
+                        "user_id": response.id
+                       },
+                success: function (data){
+                    console.log(data);
+                },
+                error: function (error){
+                    console.log(error)
+                }
+
+             }); 
+         }); 
+         alert("buy puppy finished");      
      }
 
      function fillStorePage() {
@@ -53,7 +125,7 @@
                      var length = Math.abs(data.length);
                      var Name = data[i].Name;
                      var description = data[i].description;
-                     var price = data[i].price;
+                     var price = data[i].Price;
                      var imgSource = data[i].pic_url;
                      var temp = Name.split(' ');
                      var jName = "";
@@ -61,7 +133,7 @@
                          jName += temp[j];
                      }
                      var Javascript = "Javascript:search('" + jName + "', 'SearchResults" + jName + "');";
-                     var buyJavascript = "Javascript:buyPuppy('" + data[i].products_id + "');";
+                     var buyJavascript = "Javascript:buyPuppy('" + data[i].products_id + "', '" + price + "');";
                      console.log(Javascript);
                      if (i % 4 == 0 || i == 0) {
                          //need a new row
