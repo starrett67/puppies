@@ -135,7 +135,7 @@
                 ' </td> <td class="col-md-1"> $' + OrderAmount[i] + ' </td> </tr>';
             }
             document.getElementById("OrdersList").innerHTML += '</tbody>';
-            document.getElementById("TableHodler").innerHTML += '<hr /> <table class="table table-striped"> <thread>';
+            document.getElementById("TableHolder").innerHTML += '<hr /> <table class="table table-striped"> <thread>';
             document.getElementById("TableHolder").innerHTML += '<tr> <th class="field-label col-xs-2 active"> <label> ' +
                 'Total: ' + total + '</label> </th> <th class="col-md-9"> </th> <th class="col-md-1"> <a href="#" class="btn btn-primary">Purchase</a> ' +
                 '</th> </tr> </thread> </table>';
@@ -170,7 +170,7 @@
         <div class="row" style="height: 60px;">
         </div>
     <div class="row">
-                <div id="TableHodler" style="margin: 10px;" class="col-lg-12 well">
+                <div id="TableHolder" style="margin: 10px;" class="col-lg-12 well">
                     <h2 id="OrdersHeader">
                         Your Orders:</h2>
                     <table id="OrdersList" class="table table-striped">
