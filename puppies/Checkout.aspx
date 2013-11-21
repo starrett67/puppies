@@ -103,7 +103,7 @@
                                                 if (productsOrdered != "") {
                                                     productsOrdered += ", ";
                                                 }
-                                                productsOrdered += resp[k].Name;
+                                                productsOrdered += resp[k].Name + '[' + resp[k].Price + ']';
                                             }
                                         }
                                     }
