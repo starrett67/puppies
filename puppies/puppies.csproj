@@ -66,6 +66,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Checkout2.aspx.cs">
+      <DependentUpon>Checkout2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout2.aspx.designer.cs">
+      <DependentUpon>Checkout2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -76,17 +83,26 @@
     <Compile Include="Home.Master.designer.cs">
       <DependentUpon>Home.Master</DependentUpon>
     </Compile>
+    <Compile Include="Payment.ascx.cs">
+      <DependentUpon>Payment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payment.ascx.designer.cs">
+      <DependentUpon>Payment.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="channel.html" />
     <Content Include="Checkout.aspx" />
+    <Content Include="Checkout2.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Home.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="MyAccount.aspx" />
+    <Content Include="Payment.ascx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\YoutubeAuth.js" />
     <Content Include="Scripts\YoutubeSearch.js" />
