@@ -94,7 +94,7 @@
                 type: 'Post',
                 body: {
                         "amount": price,
-                        "products_purchased": productId,
+                        //"products_purchased": productId,
                         "user_id": response.id
                        },
                 success: function (data){
@@ -105,8 +105,7 @@
                 }
 
              }); 
-         }); 
-         alert("buy puppy finished");      
+         });     
      }
 
      function fillStorePage() {
