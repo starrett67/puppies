@@ -35,7 +35,7 @@
                     <li><a href="Blog.aspx">Blog</a></li>
                 </ul>
                 <span class="glyphicon glyphicon-shopping-cart white" > </span>
-                <i class="icon-ok icon-white"></i>
+                <img src="Content/glyphicons_202_shopping_cart_white.png" />
             </div>
             <!-- /.navbar-collapse -->
            
