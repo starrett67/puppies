@@ -71,6 +71,7 @@
             console.log('Good to see you, ' + response.name + '.');
             console.log(response);
             document.getElementById("OrdersHeader").innerHTML = response.name + " Orders: ";
+            var products_purchased;
             $.ajax({
                 url: 'https://api.stackmob.com/orders',
                 headers: requestHeaders, //set the headers
@@ -81,6 +82,8 @@
                     for (var i = 0; i < data.length; i++) {
                         if (data[i].user_id == response.id) {
                             //User has order!
+                            products_purchased = data[i].products_purchased;
+                            console.log(products_purchased);
                             if (!bFirstOrderFound) {
                                 bFirstOrderFound = true;
                                 document.getElementById("OrdersList").innerHTML += '<tbody>';
@@ -96,7 +99,7 @@
                                     //ZOMG A LOOP IN A LOOP
                                     for (var k = 0; k < resp.length; k++) {
                                         //ZOMG A LOOP IN A LOOP IN A LOOP
-                                        console.log(data[i]);
+                                        console.log(products_purchased);
                                         for (var j = 0; j < data[i].products_purchased.length; j++) {
                                             if (data[i].products_purchased[j] == resp[k].products_id) {
                                                 console.log("found a match");
