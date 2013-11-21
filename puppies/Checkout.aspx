@@ -130,6 +130,7 @@
             console.log(OrderDescription);
             console.log(OrderAmount);
             var total = 0;
+            var showJavaScript = "Javascript:showPaymentInfo();"
             document.getElementById("OrdersList").innerHTML += '<tbody>';
             for (var i = 0; i < OrderNumbers.length; i++) {
                 total = Math.abs(total + OrderAmount[i]);
@@ -140,7 +141,7 @@
             document.getElementById("OrdersList").innerHTML += '</tbody>';
             document.getElementById("TableHolder").innerHTML += '<hr /> <table class="table table-striped"> <thread>';
             document.getElementById("TableHolder").innerHTML += '<tr> <th class="field-label col-xs-2 active"> <label> ' +
-                'Total: ' + total + '</label> </th> <th class="col-md-9"> </th> <th class="col-md-1"> <a href="#" class="btn btn-primary">Purchase</a> ' +
+                'Total: ' + total + '</label> </th> <th class="col-md-9"> </th> <th class="col-md-1"> <a href="' + showJavaScript + '" class="btn btn-primary">Purchase</a> ' +
                 '</th> </tr> </thread> </table>';
         });
     }
