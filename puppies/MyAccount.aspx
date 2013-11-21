@@ -65,7 +65,7 @@
             FB.api('/me', function (response) {
                 console.log('Good to see you, ' + response.name + '.');
                 var resp = response;
-                console.log(resp)
+                console.log(resp);
                 document.getElementById("fName").value = response.first_name;
                 document.getElementById("lName").value = response.last_name;
                 document.getElementById("UserName").value = response.username;
