@@ -126,13 +126,19 @@
             console.log(OrderNumbers);
             console.log(OrderDescription);
             console.log(OrderAmount);
+            var total = 0;
             document.getElementById("OrdersList").innerHTML += '<tbody>';
             for (var i = 0; i < OrderNumbers.length; i++) {
+                total = Math.abs(total + OrderAmount[i]);
                 document.getElementById("OrdersList").innerHTML += '<tr> <td class="field-label col-xs-2 active"> <label> ' +
                 'Order Number: ' + OrderNumbers[i] + '</label> </td> <td class="col-md-9"> ' + OrderDescription[i] +
                 ' </td> <td class="col-md-1"> $' + OrderAmount[i] + ' </td> </tr>';
             }
             document.getElementById("OrdersList").innerHTML += '</tbody>';
+            document.getElementById("TableHodler").innerHTML += '<hr /> <table class="table table-striped"> <thread>';
+            document.getElementById("TableHolder").innerHTML += '<tr> <th class="field-label col-xs-2 active"> <label> ' +
+                'Total: ' + total + '</label> </th> <th class="col-md-9"> </th> <th class="col-md-1"> <a href="#" class="btn btn-primary">Purchase</a> ' +
+                '</th> </tr> </thread> </table>';
         });
     }
     function getPuppiesOrdered(arrOfIds) {
@@ -164,7 +170,7 @@
         <div class="row" style="height: 60px;">
         </div>
     <div class="row">
-                <div style="margin: 10px;" class="col-lg-12 well">
+                <div id="TableHodler" style="margin: 10px;" class="col-lg-12 well">
                     <h2 id="OrdersHeader">
                         Your Orders:</h2>
                     <table id="OrdersList" class="table table-striped">

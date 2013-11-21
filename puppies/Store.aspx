@@ -97,7 +97,7 @@
              $.ajax({
                 url: 'https://api.stackmob.com/orders',
                 headers: requestHeaders,
-                type: 'Post',
+                type: 'POST',
                 body: requestBody,
                 success: function (data){
                     console.log(data);
