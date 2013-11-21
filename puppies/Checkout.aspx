@@ -87,8 +87,29 @@
                             }
                             document.getElementById("OrdersList").innerHTML += '<tr> <td class="field-label col-xs-2 active"> ' +
                                 'Order ID: ' + data[i].orders_id + '</label> </td> <td class="col-md-9">';
-                            var puppiesOrdered = getPuppiesOrdered(data[i].products_purchased);
-                            console.log(puppiesOrdered);
+                            //ZOMG AJAX IN A AJAX
+                            $.ajax({
+                                url: 'https://api.stackmob.com/Products',
+                                headers: requestHeaders, //set the headers
+                                type: 'GET',
+                                success: function (resp, textStatus, xhr) {
+                                    //ZOMG A LOOP IN A LOOP
+                                    for (var k = 0; k < resp.length; k++) {
+                                        //ZOMG A LOOP IN A LOOP IN A LOOP
+                                        for (var j = 0; j < data[i].products_purchased.length; j++) {
+                                            if (data[i].products_purchased[j] == resp[k].products_id) {
+                                                console.log("found a match");
+                                                document.getElementById("OrdersList").innerHTML += resp[k].Name + '\n';
+                                            }
+                                        }
+                                    }
+                                    console.log(productString)
+                                    return productString;
+                                },
+                                error: function (xhr, textStatus, error) {
+                                    console.log(error);
+                                }
+                            });
                             document.getElementById("OrdersList").innerHTML += puppiesOrdered + '</td> <td class="col-md-1"> ' +
                             data[i].amount + ' </td> </tr> ';
                         }
