@@ -104,20 +104,21 @@
     }
     function getPuppiesOrdered(arrOfIds) {
         var productString = ""
-        console.log(arrOfIds);
         $.ajax({
             url: 'https://api.stackmob.com/Products',
             headers: requestHeaders, //set the headers
             type: 'GET',
             success: function (data, textStatus, xhr) {
                 for (var i = 0; i < data.length; i++) {
-                    console.log(data[i].products_id);
+                    console.log(data);
                     for (var j = 0; j < arrOfIds.length; j++) {
                         if (arrOfIds[j] == data[i].products_id) {
+                            console.log("found a match");
                             productString += data[i].Name + '\n';
                         }
                     }
                 }
+                console.log(productString)
                 return productString;
             },
             error: function (xhr, textStatus, error) {
