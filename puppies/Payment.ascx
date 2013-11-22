@@ -61,7 +61,7 @@
     } (document));*/
 
     function getAmount() {
-        FB.api('/me', function (response) {
+        /*FB.api('/me', function (response) {
             console.log(response);
             console.log(GlobalAmount);
             $.ajax({
@@ -87,7 +87,12 @@
                 }
             });
 
-        });
+        });*/
+        var field = document.getElementById("<%= Amount.ClientID %>");
+        if (field) {
+            field.value = amount;
+        }
+        console.log(amount);
     }
 </script> 
 <form id="PaymentInfo" runat="server">
