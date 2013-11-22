@@ -50,8 +50,13 @@ namespace puppies
 
         private bool ValidateFields()
         {
-            String test = Amount.Value;
             bool success = true;
+            if (String.IsNullOrEmpty(Amount.Value))
+            {
+                success = false;
+                Error.Text "Err: Was not able to retrieve amount.";
+                return success;
+            }
             if (String.IsNullOrEmpty(FirstName.Text))
             {
                 success = false;
