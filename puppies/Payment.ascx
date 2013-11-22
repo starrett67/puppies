@@ -5,7 +5,7 @@
     requestHeaders['Accept'] = 'application/vnd.stackmob+json; version=0';
     requestHeaders[publicKeyHeader] = 1;
     requestHeaders['Range'] = 'objects=0-49'; //set pagination to first 10
-    window.fbAsyncInit = function () {
+    /*window.fbAsyncInit = function () {
         FB.init({
             appId: '655072947848872', // App ID
             channelUrl: '//puppiesrus.azurewebsites.net/channel.html', // Channel File
@@ -57,7 +57,7 @@
         js = d.createElement('script'); js.id = id; js.async = true;
         js.src = "//connect.facebook.net/en_US/all.js";
         ref.parentNode.insertBefore(js, ref);
-    } (document));
+    } (document));*/
 
     function getAmount() {
         FB.api('/me', function (response) {
