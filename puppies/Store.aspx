@@ -88,7 +88,7 @@
          var productsPurchase = [];
          productsPurchase.push(productId);
          FB.api('/me', function (response) {
-
+             console.log(response);
              var requestBody = { "amount": price, "products_purchased": productsPurchase, "user_id": response.id }
              console.log(requestBody);
              $.ajax({
