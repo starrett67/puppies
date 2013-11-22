@@ -7,7 +7,6 @@ using System.Web.UI.WebControls;
 using PayPal;
 using PayPal.Api.Payments;
 using Newtonsoft;
-using log4net;
 
 namespace puppies
 {
@@ -51,12 +50,12 @@ namespace puppies
         private bool ValidateFields()
         {
             bool success = true;
-            if (String.IsNullOrEmpty(Amount.Value))
-            {
-                success = false;
-                Error.Text = "Err: Was not able to retrieve amount.";
-                return success;
-            }
+            //if (String.IsNullOrEmpty(Amount.Value))
+            //{
+            //    success = false;
+            //    Error.Text = "Err: Was not able to retrieve amount.";
+            //    return success;
+            //}
             if (String.IsNullOrEmpty(FirstName.Text))
             {
                 success = false;
@@ -123,7 +122,7 @@ namespace puppies
             CreditCard creditCard = new CreditCard();
             Address bAddress = new Address();
             Amount amount = new Amount();
-            AmountDetails amountDetails = new AmountDetails();
+            Details amountDetails = new Details();
             Payer payer = new Payer();
             PayPal.Api.Payments.Payment payment = new PayPal.Api.Payments.Payment();
             List<Transaction> transactions = new List<Transaction>();
@@ -132,8 +131,10 @@ namespace puppies
             FundingInstrument fundingInstrument = new FundingInstrument();
             OAuthTokenCredential tokenCredentials = new OAuthTokenCredential(ClientID, Secret);
 
-            var SubTotal = Amount.Value;
-            var tax = (Double.Parse(Amount.Value) * .06).ToString();
+            //var SubTotal = Amount.Value;
+            var SubTotal = "400.0";
+            //var tax = (Double.Parse(Amount.Value) * .06).ToString();
+            var tax = "3.00";
             var shipping = "4.00";
             var total = (Double.Parse(SubTotal) + Double.Parse(tax) + Double.Parse(shipping)).ToString();
 
@@ -149,8 +150,8 @@ namespace puppies
             //Credit card info
             creditCard.number = CardNumber.Text;
             creditCard.type = CardType.SelectedItem.Text;
-            creditCard.expire_month = ExpMonth.SelectedItem.Text;
-            creditCard.expire_year = ExpYear.SelectedItem.Text;
+            creditCard.expire_month = Int32.Parse(ExpMonth.SelectedItem.Text);
+            creditCard.expire_year = Int32.Parse(ExpYear.SelectedItem.Text);
             creditCard.cvv2 = CvvCode.Text;
             creditCard.first_name = FirstName.Text;
             creditCard.last_name = LastName.Text;

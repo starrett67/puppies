@@ -160,5 +160,5 @@
     </table>
     <asp:Label ID="Error" runat="server" ForeColor="Red" ClientIDMode="Static" Visible="false"></asp:Label>
     <br />
-    <asp:HyperLink ID="Submit" runat="server" Text="Confirm" ClientIDMode="Static" onclick="Submit_Click" />
+    <asp:Button ID="Submit" runat="server" Text="Confirm" ClientIDMode="Static" onclick="Submit_Click" />
 </form>

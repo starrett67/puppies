@@ -204,7 +204,7 @@
                 </div>
             </div>
 </div>
-<div id="PaymentContainer" class="container" style="display: none">
+<div id="PaymentContainer" class="container" style="display: block">
     <PaymentControl:PaymentStart runat="server"></PaymentControl:PaymentStart>
 </div>
 </asp:Content>
