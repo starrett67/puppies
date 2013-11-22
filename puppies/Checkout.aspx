@@ -11,6 +11,9 @@
     requestHeaders[publicKeyHeader] = 1;
     requestHeaders['Range'] = 'objects=0-49'; //set pagination to first 10
 
+    var GlobalAmount;
+    var GlobalOrderIDs = [];
+
     window.fbAsyncInit = function () {
         FB.init({
             appId: '655072947848872', // App ID
@@ -127,6 +130,7 @@
                     console.debug(error);
                 }
             });
+            GlobalOrderIDs = OrderNumbers;
             console.log(OrderNumbers);
             console.log(OrderDescription);
             console.log(OrderAmount);
@@ -139,6 +143,7 @@
                 'Order Number: ' + OrderNumbers[i] + '</label> </td> <td class="col-md-9"> ' + OrderDescription[i] +
                 ' </td> <td class="col-md-1"> $' + OrderAmount[i] + ' </td> </tr>';
             }
+            GlobalAmount = total;
             document.getElementById("OrdersList").innerHTML += '</tbody>';
             document.getElementById("TableHolder").innerHTML += '<hr /> <table class="table table-striped"> <thread>';
             document.getElementById("TableHolder").innerHTML += '<tr> <th class="field-label col-xs-2 active"> <label id="total"> ' +

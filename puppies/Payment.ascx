@@ -63,6 +63,7 @@
     function getAmount() {
         FB.api('/me', function (response) {
             console.log(response);
+            console.log(GlobalAmount);
             $.ajax({
                 url: 'https://api.stackmob.com/orders',
                 headers: requestHeaders, //set the headers
@@ -89,7 +90,7 @@
         });
     }
 </script>
-<input type="text" id="Amount" runat="server" readonly="readonly" tabindex="-1000" style="border:0px;background-color:transparent;" />
+<asp:HiddenField ID="Amount" runat="server" /> 
 <form id="PaymentInfo" runat="server">
     <table>
         <tr>
