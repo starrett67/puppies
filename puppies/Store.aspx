@@ -101,6 +101,7 @@
                  data: JSON.stringify(requestBody),
                  success: function (data) {
                      console.log(data);
+                     document.getElementById("AddedToCart").innerHTML = "Item has been added to cart, view the checkout page to confirm your order";
                  },
                  error: function (error) {
                      console.log(error)
@@ -166,6 +167,8 @@
         <!-- /.row -->
         <div id="divLogin-link">
             <a href="#" id="login-link">please login first</a>
+        </div>
+        <div id="AddedToCart">
         </div>
         <div class="row text-center">
             <!--    <div class="col-lg-3 col-md-6 hero-feature">
