@@ -50,6 +50,7 @@ namespace puppies
 
         private bool ValidateFields()
         {
+            String test = Amount.Value;
             bool success = true;
             if (String.IsNullOrEmpty(FirstName.Text))
             {
