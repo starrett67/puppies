@@ -89,9 +89,9 @@
 
         });
     }
-</script>
-<asp:HiddenField ID="Amount" runat="server" /> 
+</script> 
 <form id="PaymentInfo" runat="server">
+    <asp:HiddenField ID="Amount" runat="server" />
     <table>
         <tr>
             <td>

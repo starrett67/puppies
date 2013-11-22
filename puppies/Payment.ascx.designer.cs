@@ -13,15 +13,6 @@ namespace puppies {
     public partial class Payment {
         
         /// <summary>
-        /// Amount control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField Amount;
-        
-        /// <summary>
         /// PaymentInfo control.
         /// </summary>
         /// <remarks>
@@ -29,6 +20,15 @@ namespace puppies {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm PaymentInfo;
+        
+        /// <summary>
+        /// Amount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField Amount;
         
         /// <summary>
         /// FirstName control.
