@@ -1,5 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Payment.ascx.cs" Inherits="puppies.Payment" %>
 <script type="text/javascript">
+    console.log(document.getElementById("total").innerHTML);
     $('#Submit').click(function( event ) {
         if( $('#Error').val != "")
         {

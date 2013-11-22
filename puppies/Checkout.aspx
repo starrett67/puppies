@@ -140,7 +140,7 @@
             }
             document.getElementById("OrdersList").innerHTML += '</tbody>';
             document.getElementById("TableHolder").innerHTML += '<hr /> <table class="table table-striped"> <thread>';
-            document.getElementById("TableHolder").innerHTML += '<tr> <th class="field-label col-xs-2 active"> <label> ' +
+            document.getElementById("TableHolder").innerHTML += '<tr> <th class="field-label col-xs-2 active"> <label id="total"> ' +
                 'Total: ' + total + '</label> </th> <th class="col-md-9"> </th> <th class="col-md-1"> <a href="' + showJavaScript + '" class="btn btn-primary">Purchase</a> ' +
                 '</th> </tr> </thread> </table>';
         });
