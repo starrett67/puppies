@@ -5,6 +5,7 @@
     requestHeaders['Accept'] = 'application/vnd.stackmob+json; version=0';
     requestHeaders[publicKeyHeader] = 1;
     requestHeaders['Range'] = 'objects=0-49'; //set pagination to first 10
+    getAmount();
     /*window.fbAsyncInit = function () {
         FB.init({
             appId: '655072947848872', // App ID
