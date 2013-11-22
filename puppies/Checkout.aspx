@@ -34,7 +34,6 @@
                 // login status of the person. In this case, we're handling the situation where they 
                 // have logged in to the app.
                 fillOrdersTable();
-                getAmount();
             } else if (response.status === 'not_authorized') {
                 // In this case, the person is logged into Facebook, but not into the app, so we call
                 // FB.login() to prompt them to do so. 
@@ -149,6 +148,8 @@
             document.getElementById("TableHolder").innerHTML += '<tr> <th class="field-label col-xs-2 active"> <label id="total"> ' +
                 'Total: ' + total + '</label> </th> <th class="col-md-9"> </th> <th class="col-md-1"> <a href="' + showJavaScript + '" class="btn btn-primary">Purchase</a> ' +
                 '</th> </tr> </thread> </table>';
+
+            getAmount();
         });
     }
     function getPuppiesOrdered(arrOfIds) {
