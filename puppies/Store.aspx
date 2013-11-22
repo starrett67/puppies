@@ -88,9 +88,11 @@
          var productsPurchase = [];
          productsPurchase.push(productId);
          price = parseFloat(price);
+         var purchased = false;
          FB.api('/me', function (response) {
              console.log(response);
-             var requestBody = { "amount": price, "products_purchased": productsPurchase, "user_id": response.id }
+             var userId = parseInt(response.id);
+             var requestBody = { "amount": price, "products_purchased": productsPurchase, "user_id": userId, "purchased": purchased }
              console.log(requestBody);
              $.ajax({
                  url: 'https://api.stackmob.com/orders',
