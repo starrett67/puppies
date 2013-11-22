@@ -132,6 +132,11 @@ namespace puppies
             FundingInstrument fundingInstrument = new FundingInstrument();
             OAuthTokenCredential tokenCredentials = new OAuthTokenCredential(ClientID, Secret);
 
+            var SubTotal = Amount.Value;
+            var tax = (Double.Parse(Amount.Value) * .06).ToString();
+            var shipping = "4.00";
+            var total = (Double.Parse(SubTotal) + Double.Parse(tax) + Double.Parse(shipping)).ToString();
+
             String accessToken = tokenCredentials.GetAccessToken();
 
             //billing address info
@@ -152,12 +157,12 @@ namespace puppies
             creditCard.billing_address = bAddress;
             
             //Amount Details
-            amountDetails.subtotal = "";
-            amountDetails.tax = "0.00";
-            amountDetails.shipping = "0.00";
+            amountDetails.subtotal = SubTotal;
+            amountDetails.tax = tax;
+            amountDetails.shipping = shipping;
 
             //Amount info
-            amount.total = "0.00";
+            amount.total = total;
             amount.currency = "USD";
             amount.details = amountDetails;
 
@@ -180,6 +185,14 @@ namespace puppies
             payment.transactions = transactions;
 
             PayPal.Api.Payments.Payment createdPayment = payment.Create(accessToken);
+            if (createdPayment.state.Equals("approved"))
+            {
+                Error.Text = "approved";
+            }
+            else
+            {
+                Error.Text = "Failed";
+            }
             return success;
         }
     }
