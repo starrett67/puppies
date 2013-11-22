@@ -90,9 +90,9 @@
         });*/
         var field = document.getElementById("<%= Amount.ClientID %>");
         if (field) {
-            field.value = amount;
+            field.value = GlobalAmount;
         }
-        console.log(amount);
+        console.log(GlobalAmount);
     }
 </script> 
 <form id="PaymentInfo" runat="server">
