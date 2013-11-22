@@ -126,7 +126,7 @@
                          jName += temp[j];
                      }
                      var Javascript = "Javascript:search('" + jName + "', 'SearchResults" + jName + "');";
-                     var buyJavascript = "Javascript:buyPuppy('" + data[i].products_id + "', '" + price + "');";
+                     var buyJavascript = "Javascript:buyPuppy('" + data[i].products_id + "', '" + price + ".0');";
                      console.log(Javascript);
                      if (i % 4 == 0 || i == 0) {
                          //need a new row
