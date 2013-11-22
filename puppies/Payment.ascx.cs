@@ -38,6 +38,7 @@ namespace puppies
             if (ValidateFields())
             {
                 //good to go attempt paypal verification
+                createPaypalPayment();
             }
             else 
             {
