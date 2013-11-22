@@ -70,7 +70,7 @@
                 success: function (data, textStatus, xhr) {
                     var amount = Math.abs(0);
                     for (var i = 0; i < data.length; i++) {
-                        if (data[i].user_id == respons.id && !data[i].purchased) {
+                        if (data[i].user_id == response.id && !data[i].purchased) {
                             amount += Math.abs(data[i].amount);
                         }
                     }

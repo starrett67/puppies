@@ -54,7 +54,7 @@ namespace puppies
             if (String.IsNullOrEmpty(Amount.Value))
             {
                 success = false;
-                Error.Text "Err: Was not able to retrieve amount.";
+                Error.Text = "Err: Was not able to retrieve amount.";
                 return success;
             }
             if (String.IsNullOrEmpty(FirstName.Text))
