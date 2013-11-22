@@ -30,7 +30,6 @@ namespace puppies
             }
             if (!Page.IsPostBack)
             {
-                Error.Text = "";
             }
         }
 
