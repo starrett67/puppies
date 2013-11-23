@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using log4net;
 
 namespace puppies
 {
@@ -27,7 +28,7 @@ namespace puppies
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-
+            log4net.Config.XmlConfigurator.Configure();
             RegisterRoutes(RouteTable.Routes);
         }
     }
