@@ -1,12 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ValidationSuccess.aspx.cs" Inherits="puppies.ValidationSuccess" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" Inherits="System.Web.Mvc.ViewPage" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="PuppyContent" runat="server">
 <script>
     var publicKeyHeader = 'X-StackMob-API-Key-ae924762-6432-41d7-88ca-5f034661e46b';
     var requestHeaders = {};
@@ -35,7 +31,7 @@
                 // The response object is returned with a status field that lets the app know the current
                 // login status of the person. In this case, we're handling the situation where they 
                 // have logged in to the app.
-                updateDatabase();
+                UpdateDatabase();
             } else if (response.status === 'not_authorized') {
                 // In this case, the person is logged into Facebook, but not into the app, so we call
                 // FB.login() to prompt them to do so. 
