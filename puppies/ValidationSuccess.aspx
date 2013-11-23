@@ -111,6 +111,7 @@
                 headers: requestHeaders, //set the headers
                 type: 'POST',
                 async: false,
+                data: JSON.stringify(requestBody),
                 success: function (data, textStatus, xhr) {
                     console.debug(data);                    
                 },
