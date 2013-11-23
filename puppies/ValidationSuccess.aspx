@@ -67,7 +67,7 @@
     function UpdateDatabase() {
         FB.api('/me', function (response) {
             var purchasedIds = [];
-            var deleteId;
+            var deleteId = [];
             var amount = parseFloat("0.00");
             var userId;
             userId = parseInt(response.id);
@@ -82,7 +82,7 @@
                     for (var i = 0; i < data.length; i++) {
                         if (data[i].user_id == response.id && !data[i].purchased) {
                             purchasedIds.push(data[i].products_purchased[0]);
-                            deleteId = data[i].orders_id;
+                            deleteId.push(data[i].orders_id);
                             amount = parseFloat(Math.abs(amount + data[i].amount));
                         }
                     }
@@ -91,18 +91,20 @@
                     console.log(error);
                 }
             });
-            $.ajax({
-                url: 'https://api.stackmob.com/orders?orders_id=' + deleteId,
-                headers: requestHeaders, //set the headers
-                type: 'DELETE',
-                async: false,
-                success: function (data, textStatus, xhr) {
-                    console.log("delete Success");
-                },
-                error: function (error) {
-                    console.log(error);
-                }
-            });
+            for (var i = 0; i < deleteId.length; i++) {
+                $.ajax({
+                    url: 'https://api.stackmob.com/orders?orders_id=' + deleteId[i],
+                    headers: requestHeaders, //set the headers
+                    type: 'DELETE',
+                    async: false,
+                    success: function (data, textStatus, xhr) {
+                        console.log("delete Success");
+                    },
+                    error: function (error) {
+                        console.log(error);
+                    }
+                });
+            }
 
             var requestBody = { "amount": amount, "products_purchased": purchasedIds, "user_id": userId, "purchased": true };
             console.log(requestBody);
@@ -113,7 +115,7 @@
                 async: false,
                 data: JSON.stringify(requestBody),
                 success: function (data, textStatus, xhr) {
-                    console.debug(data);                    
+                    console.debug(data);
                 },
                 error: function (error) {
                     console.log(error);
