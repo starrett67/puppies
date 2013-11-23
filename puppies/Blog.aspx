@@ -2,10 +2,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="PuppyContent" runat="server">
-    <!--https://developers.google.com/blogger/docs/3.0/using#RetrievingPostsForABlog
+    <!--https://developers.google.com/blogger/docs/3.0/using#RetrievingPostsForABlog-->
     
     <div class="container">
- 
+    <!--
       <div class="row">
 
         <div class="col-md-1">
@@ -70,7 +70,7 @@
           <li class="previous"><a href="#">&larr; Older</a></li>
           <li class="next"><a href="#">Newer &rarr;</a></li>
         </ul>
+        -->
+      </div><!--/.container-->
 
-      </div>
-    </div><!-- /.container -->
     </asp:Content>
