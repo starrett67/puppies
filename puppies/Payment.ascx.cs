@@ -14,7 +14,7 @@ namespace puppies
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            String[] CardTypes = { "Visa", "MasterCard", "American Express", "Chase" };
+            String[] CardTypes = { "visa", "masterCard", "american express", "discover" };
             for (int i = 0; i < CardTypes.Length; i++)
             {
                 CardType.Items.Add(CardTypes[i]);
@@ -74,12 +74,6 @@ namespace puppies
                 Error.Text = "Err: Please give us your card number.";
                 return success;
             }
-            if (String.IsNullOrEmpty(CvvCode.Text))
-            {
-                success = false;
-                Error.Text = "Err: Please give us your cvv code.";
-                return success;
-            }
             if (String.IsNullOrEmpty(Address.Text))
             {
                 success = false;
@@ -129,10 +123,12 @@ namespace puppies
             Transaction transaction = new Transaction();
             List<FundingInstrument> fundingInstruments = new List<FundingInstrument>();
             FundingInstrument fundingInstrument = new FundingInstrument();
+            Dictionary<string, string> payPalConfig = new Dictionary<string, string>();
+            payPalConfig.Add("mode", "sandbox");
             OAuthTokenCredential tokenCredentials = new OAuthTokenCredential(ClientID, Secret);
 
             //var SubTotal = Amount.Value;
-            var SubTotal = "400.0";
+            var SubTotal = "400.00";
             //var tax = (Double.Parse(Amount.Value) * .06).ToString();
             var tax = "3.00";
             var shipping = "4.00";
@@ -163,7 +159,7 @@ namespace puppies
             amountDetails.shipping = shipping;
 
             //Amount info
-            amount.total = total;
+            amount.total = total + ".00";
             amount.currency = "USD";
             amount.details = amountDetails;
 
@@ -184,15 +180,30 @@ namespace puppies
             payment.intent = "sale";
             payment.payer = payer;
             payment.transactions = transactions;
-
-            PayPal.Api.Payments.Payment createdPayment = payment.Create(accessToken);
+            PayPal.Api.Payments.Payment createdPayment = null;
+            try
+            {
+                createdPayment = payment.Create(accessToken);
+            }
+            catch (PayPal.Exception.PayPalException ex)
+            {
+                Response.Redirect("ValidationFailed.aspx", true);
+                if (ex.InnerException is PayPal.Exception.ConnectionException)
+                {
+                    Console.Out.WriteLine(((PayPal.Exception.PayPalException)ex.InnerException).Message);
+                }
+                else
+                {
+                    Console.Out.WriteLine(ex.Message);
+                }
+            }
             if (createdPayment.state.Equals("approved"))
             {
-                Error.Text = "approved";
+                Response.Redirect("ValidationSuccess.aspx", true);
             }
             else
             {
-                Error.Text = "Failed";
+                Response.Redirect("ValidationFailed.aspx", true);
             }
             return success;
         }
