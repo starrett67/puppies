@@ -125,5 +125,4 @@
     <div class="jumbotron hero-spacer">
         <h1>Your order is complete</h1>    
     </div>
-</body>
-</html>
+</asp:Content>
