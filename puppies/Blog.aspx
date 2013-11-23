@@ -5,15 +5,14 @@
     <!--https://developers.google.com/blogger/docs/3.0/using#RetrievingPostsForABlog-->
     
     <div class="container">
-   
+    <div class="row">
       <div class="row">
-
         <div class="col-md-1">
-          <p><i class="fa fa-camera fa-4x"></i></p>
+          <!--<p><i class="fa fa-camera fa-4x"></i></p> -->
           <p>May 24, 2013</p>
         </div>
         <div class="col-md-5">
-          <a href="blog-post.html"><img src="http://placehold.it/600x300" class="img-responsive"></a>
+          <a href="puppiesrus.azurewebsites.net/Home.aspx"><img src="http://placehold.it/600x300" class="img-responsive"></a>
         </div>
         <div class="col-md-6">
           <h3><a href="blog-post.html">A Blog Home Template for Bootstrap 3</a></h3>
@@ -25,7 +24,7 @@
       </div>
 
       <hr>
-
+      <!-->
       <div class="row">
 
         <div class="col-md-1">
@@ -63,14 +62,14 @@
       </div>
 
       <hr>
-
+      <-->
       <div class="row">
 
         <ul class="pager">
           <li class="previous"><a href="#">&larr; Older</a></li>
           <li class="next"><a href="#">Newer &rarr;</a></li>
         </ul>
-        -->
+        
       </div><!--/.container-->
 
     </asp:Content>
