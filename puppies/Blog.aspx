@@ -10,19 +10,20 @@
      <div class="row">
  
       <div class="container">
-        <h3>Puppies on the Web!</h3>
+      <div class="row text-center">
+        <h1>Puppies on the Web!</h1>
         <p>Look at all the cuteness! You're head will explode!</p>
       </div>
+      </div>
 
-      <div class="row" style="height: 50px;">
-        </div>
+      <div class="row" style="height: 50px;"></div>
 
         <div class="col-md-1">
           <!--<p><i class="fa fa-camera fa-4x"></i></p> -->
           <p>May 24, 2013</p>
         </div>
         <div class="col-md-5">
-          <a href="Home.aspx"><img src="http://placehold.it/600x300" class="img-responsive"></a>
+          <a href="Home.aspx"><img src="http://farm5.staticflickr.com/4081/4883281674_8428f07e53_z.jpg" class="img-responsive"></a>
         </div>
         <div class="col-md-6">
           <h3><a href="blog-post.html">A Blog Home Template for Bootstrap 3</a></h3>
