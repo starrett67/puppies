@@ -127,10 +127,10 @@ namespace puppies
             payPalConfig.Add("mode", "sandbox");
             OAuthTokenCredential tokenCredentials = new OAuthTokenCredential(ClientID, Secret);
 
-            //var SubTotal = Amount.Value;
-            var SubTotal = "400.00";
-            //var tax = (Double.Parse(Amount.Value) * .06).ToString();
-            var tax = "3.00";
+            var SubTotal = Amount.Value;
+            //var SubTotal = "400.00";
+            var tax = (Double.Parse(Amount.Value) * .06).ToString();
+            //var tax = "3.00";
             var shipping = "4.00";
             var total = (Double.Parse(SubTotal) + Double.Parse(tax) + Double.Parse(shipping)).ToString();
 
