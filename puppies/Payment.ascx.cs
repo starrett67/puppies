@@ -140,7 +140,7 @@ namespace puppies
             String BillingAddress = BillingLine + "-" + BillingCity + "-" + BillingState + "-" + BillingZip + "-" + BillingCountry;
             String AmountInfo = total + "-" + SubTotal + "-" + tax + "-" + shipping;
 
-            Page.ClientScript.RegisterStartupScript(this.GetType(), "CreatePaypalPayment", "CreatePayPalPayment('" + CreditCardInfo + "', '" + 
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "CreatePaypalPayment", "CreatePaypalPayment('" + CreditCardInfo + "', '" + 
                 BillingAddress + "', '" + AmountInfo + "', '" + ClientID + "', '" + Secret + "');", true);
             /*CreditCard creditCard = new CreditCard();
             Address bAddress = new Address();
