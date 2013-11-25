@@ -5,9 +5,13 @@
     Headers['Accept-Language'] ="en_US";
     getAmount();
 
-    function CreatePaypalPayment(CardInfo, BillingAddress, Amount, ClientId, Secret) {
+    function CreatePaypalPayment(Card, Billing, AmountInfo, ClientId, Secret) {
+        alert("CreatePayment");
         var Id = ClientId;
         Headers[Id] = Secret;
+        var CardInfo = Card.split(' ');
+        var Amount = AmountInfo.split(' ');
+        var BillingAddress = Billing.split(' ');
         var PaymentInfo = {
             "intent": "sale",
             "payer": {

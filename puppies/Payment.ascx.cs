@@ -139,8 +139,9 @@ namespace puppies
                 FName + " " + LName;
             String BillingAddress = BillingLine + " " + BillingCity + " " + BillingState + " " + BillingZip + " " + BillingCountry;
             String AmountInfo = total + " " + SubTotal + " " + tax + " " + shipping;
-            Page.ClientScript.RegisterStartupScript(this.GetType(), "CreatePayPalPayment", "CreatePayPalPayment(" + CreditCardInfo.Split(' ') + 
-                ", " + BillingAddress.Split(' ') + ", " + AmountInfo.Split(' ') + ", " + ClientID + ", " + Secret + ")", true);
+
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "CreatePayPalPayment", "CreatePayPalPayment(" + temp1 + 
+                ", " + CreditCardInfo + ", " + BillingAddress + ", " + AmountInfo + ", " + Secret + ");", true);
             /*CreditCard creditCard = new CreditCard();
             Address bAddress = new Address();
             Amount amount = new Amount();
