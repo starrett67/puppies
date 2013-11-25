@@ -9,9 +9,9 @@
         alert("CreatePayment");
         var Id = ClientId;
         Headers[Id] = Secret;
-        var CardInfo = Card.split(' ');
-        var Amount = AmountInfo.split(' ');
-        var BillingAddress = Billing.split(' ');
+        var CardInfo = Card.split('-');
+        var Amount = AmountInfo.split('-');
+        var BillingAddress = Billing.split('-');
         var PaymentInfo = {
             "intent": "sale",
             "payer": {
