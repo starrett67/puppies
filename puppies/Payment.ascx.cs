@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Net;
 using PayPal;
 using PayPal.Api.Payments;
 using Newtonsoft;
@@ -113,7 +114,34 @@ namespace puppies
             bool success = false;
             String ClientID = "ATBTSxBIPTdaG_61_1waSimujWIDYHceqjlTFqwF7cu8Fuf6vBkq3tDGLDyp";//todo get from drew
             String Secret = "EMRGvBC0nnC1NxAtgOYXU_rKsfP_pZcG4ymjIiNzpO71zXWN1vvGwiax1b5Y"; //todo get from drew
-            CreditCard creditCard = new CreditCard();
+            var SubTotal = Amount.Value;
+            var tax = (Double.Parse(Amount.Value) * .06).ToString();
+            var shipping = "4.00";
+            var total = (Double.Parse(SubTotal) + Double.Parse(tax) + Double.Parse(shipping)).ToString();
+            String CreditNumber, CreditType, Cvv2, FName, LName, BillingZip,
+                BillingLine, BillingCity, BillingCountry, BillingState, Description;
+            int CardExpMonth, CardExpYear;
+            CreditNumber = CardNumber.Text;
+            CreditType = CardType.Text;
+            CardExpMonth = Int32.Parse(ExpMonth.Text);
+            CardExpYear = Int32.Parse(ExpYear.Text);
+            FName = FirstName.Text;
+            LName = LastName.Text;
+            BillingLine = Address.Text;
+            BillingCity = City.Text;
+            BillingCountry = Country.Text;
+            Cvv2 = CvvCode.Text;
+            BillingZip = Zip.Text;
+            BillingState = State.Text;
+            Description = "Puppiesrus Transaction";
+
+            String CreditCardInfo = CreditType + " " + CreditNumber + " " + CardExpMonth + " " + CardExpYear + " " + Cvv2 + " " +
+                FName + " " + LName;
+            String BillingAddress = BillingLine + " " + BillingCity + " " + BillingState + " " + BillingZip + " " + BillingCountry;
+            String AmountInfo = total + " " + SubTotal + " " + tax + " " + shipping;
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "CreatePayPalPayment", "CreatePayPalPayment(" + CreditCardInfo.Split(' ') + 
+                ", " + BillingAddress.Split(' ') + ", " + AmountInfo.Split(' ') + ", " + ClientID + ", " + Secret + ")", true);
+            /*CreditCard creditCard = new CreditCard();
             Address bAddress = new Address();
             Amount amount = new Amount();
             Details amountDetails = new Details();
@@ -125,16 +153,17 @@ namespace puppies
             FundingInstrument fundingInstrument = new FundingInstrument();
             Dictionary<string, string> payPalConfig = new Dictionary<string, string>();
             payPalConfig.Add("mode", "sandbox");
-            OAuthTokenCredential tokenCredentials = new OAuthTokenCredential(ClientID, Secret);
+            OAuthTokenCredential token = new OAuthTokenCredential(ClientID, Secret, payPalConfig);
+            token.GetAccessToken();
 
-            var SubTotal = Amount.Value;
-            //var SubTotal = "400.00";
-            var tax = (Double.Parse(Amount.Value) * .06).ToString();
-            //var tax = "3.00";
+            //var SubTotal = Amount.Value;
+            var SubTotal = "400.00";
+            //var tax = (Double.Parse(Amount.Value) * .06).ToString();
+            var tax = "3.00";
             var shipping = "4.00";
             var total = (Double.Parse(SubTotal) + Double.Parse(tax) + Double.Parse(shipping)).ToString();
-
-            String accessToken = tokenCredentials.GetAccessToken();
+            APIContext apiContext = new APIContext();
+            apiContext.Config = payPalConfig;
 
             //billing address info
             bAddress.line1 = Address.Text;
@@ -183,7 +212,7 @@ namespace puppies
             PayPal.Api.Payments.Payment createdPayment = null;
             try
             {
-                createdPayment = payment.Create(accessToken);
+                createdPayment = payment.Create(apiContext);
             }
             catch (PayPal.Exception.PayPalException ex)
             {
@@ -204,7 +233,7 @@ namespace puppies
             else
             {
                 Response.Redirect("ValidationFailed.aspx", true);
-            }
+            }*/
             return success;
         }
     }
