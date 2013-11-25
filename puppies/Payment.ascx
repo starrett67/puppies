@@ -45,7 +45,7 @@
                         "shipping": Amount[3]
                     }
                 },
-                "description": Description
+                "description": "Puppiesrus Payment"
             }]
         };
         console.log(PaymentInfo);
