@@ -6,7 +6,10 @@
         var feed = new Instafeed({
             get: 'tagged',
             tagName: 'puppies',
-            clientId: 'f8c344c3cdb14f0a84e9ce2c0ecd67fc'
+            clientId: 'f8c344c3cdb14f0a84e9ce2c0ecd67fc',
+            resolution: 'low_resolution',
+            limit: 20
+
         });
         feed.run();
             </script>
@@ -14,7 +17,7 @@
          <div class="row" style="height: 50px;">
         </div>
      <div class="row">
- 
+    
       
       <div class="row text-center">
         <h1>These puppies all went to good homes...will yours?</h1>
