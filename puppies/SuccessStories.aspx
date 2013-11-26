@@ -2,6 +2,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="PuppyContent" runat="server">
+    <script type="text/javascript">
+        var feed = new Instafeed({
+            get: 'tagged',
+            tagName: 'puppies',
+            clientId: 'f8c344c3cdb14f0a84e9ce2c0ecd67fc'
+        });
+        feed.run();
+            </script>
     <div class="container">
          <div class="row" style="height: 50px;">
         </div>
@@ -14,14 +22,7 @@
       </div> </div> </div> </div>
      <div class="row" style="height: 50px;"> </div>
    
-        <script type="text/javascript">
-            var feed = new Instafeed({
-                get: 'tagged',
-                tagName: 'puppies',
-                clientId: 'f8c344c3cdb14f0a84e9ce2c0ecd67fc'
-            });
-            feed.run();
-            </script>
+        
     
 </asp:Content>
 
