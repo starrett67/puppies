@@ -6,7 +6,7 @@
      <div class="row" style="height: 60px;">
         </div>
      <div class="row">
-            <div class="jumbotron hero-spacer well">
+            <div class="jumbotron hero-spacer">
                 <h1>Puppies R US!</h1>
                 <p>We sell the best, Healthiest, and Friendliest Dogs around!  See Our most popular selections below</p>
             </div>
