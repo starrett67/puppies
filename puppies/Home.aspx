@@ -1,23 +1,22 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" Inherits="System.Web.Mvc.ViewPage" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="PuppyContent" runat="server">
     <div class="container">
-     <div class="row" style="height: 60px;">
+        <div class="row" style="height: 60px;">
         </div>
-     <div class="row">
+        <div class="row">
             <div class="jumbotron hero-spacer">
-                <h1>Puppies R US!</h1>
-                <p>We sell the best, Healthiest, and Friendliest Dogs around!  See Our most popular selections below</p>
+                <h1>
+                    Puppies R US!</h1>
+                <p>
+                    We sell the best, Healthiest, and Friendliest Dogs around! See Our most popular
+                    selections below</p>
             </div>
         </div>
-      
-      
-      <hr>
-      
-      
-      
-      <div class="row text-center">
+        <hr />
+        <!--<div class="row text-center">
       <h3>Popular Dogs</h3>
         <div class="col-lg-3 col-md-6 hero-feature">
           <div class="thumbnail">
@@ -61,26 +60,28 @@
               <p><a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a></p>
             </div>
           </div>
+        </div> -->
+
+
+      </div>
+        <!-- /.row -->
+        <hr />
+        <div class="row">
+            <center>
+                <a class="twitter-timeline" href="https://twitter.com/ASPCA" data-widget-id="405205603703734272">
+                    Tweets by @ASPCA</a>
+                <script>                    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } } (document, "script", "twitter-wjs");</script>
+            </center>
         </div>
-
-
-      </div><!-- /.row -->
-      <hr>
-      <div class="row">
-      <center><a class="twitter-timeline" href="https://twitter.com/ASPCA" data-widget-id="405205603703734272">Tweets by @ASPCA</a>
-            <script>                !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } } (document, "script", "twitter-wjs");</script></center>
-        
-  </div><!-- /.row -->
-      
-      <hr>
-
-      <footer>
+        <!-- /.row -->
+        <hr />
+        <footer>
         <div class="row">
           <div class="col-lg-12">
             <p>Copyright &copy; PuppiesRUS 2013 &middot;</p>
           </div>
         </div>
       </footer>
-      
-    </div><!-- /.container -->
+    </div>
+    <!-- /.container -->
 </asp:Content>

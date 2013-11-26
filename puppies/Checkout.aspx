@@ -2,7 +2,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="PuppyContent" runat="server">
-<%@ Register TagPrefix="PaymentControl" TagName="PaymentStart" Src="Payment.ascx" %>
 <script type="text/javascript">
 
     var publicKeyHeader = 'X-StackMob-API-Key-ae924762-6432-41d7-88ca-5f034661e46b';
@@ -204,9 +203,6 @@
                 </div>
             </div>
             
-</div>
-<div id="PaymentContainer" class="container" style="display: block">
-    <PaymentControl:PaymentStart runat="server"></PaymentControl:PaymentStart>
 </div>
     <hr />
     <div>
