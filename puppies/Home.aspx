@@ -6,11 +6,9 @@
      <div class="row-fluid" style="height: 60px;">
         </div>
      <div class="row">
-        <div class="col-lg-4 ">
-            <a class="twitter-timeline" href="https://twitter.com/ASPCA" data-widget-id="405205603703734272">Tweets by @ASPCA</a>
-            <script>    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } } (document, "script", "twitter-wjs");</script>
-        </div>
-        <div class="col-lg-8 "
+        
+            
+        <div class="col-lg-12"
             <div class="jumbotron hero-spacer">
                 <h1>Puppies R US!</h1>
                 <p>We sell the best, Healthiest, and Friendliest Dogs around!  See Our most popular selections below</p>
@@ -76,6 +74,9 @@
 
       </div><!-- /.row -->
       <hr>
+      <div><a class="twitter-timeline" href="https://twitter.com/ASPCA" data-widget-id="405205603703734272">Tweets by @ASPCA</a>
+            <script>                !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } } (document, "script", "twitter-wjs");</script>
+        
   </div><!-- /.row -->
       
       <hr>
