@@ -13,7 +13,7 @@
         <div id="instafeed"></div>
       </div> </div> </div> </div>
      <div class="row" style="height: 50px;"> </div>
-   <script type="text/javascript" src="Scripts/instafeed.min.js"></script>
+   
         <script type="text/javascript">
             var feed = new Instafeed({
                 get: 'tagged',
