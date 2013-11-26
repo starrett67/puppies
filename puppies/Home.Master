@@ -17,7 +17,7 @@
     <script type='text/javascript'>
         jQuery(function ($) {
             $(".tweet").tweet({
-                username: "seaofclouds",
+                username: "reddyyeti",
                 join_text: "auto",
                 avatar_size: 32,
                 count: 3,
