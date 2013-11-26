@@ -10,6 +10,7 @@
       <div class="container">
       <div class="row text-center">
         <h1>These puppies all went to good homes...will yours?</h1>
+        <div id="instafeed"></div>
       </div> </div> </div> </div>
      <div class="row" style="height: 50px;"> </div>
    <script type="text/javascript" src="Scripts/instafeed.min.js"></script>
@@ -21,7 +22,7 @@
             });
             feed.run();
             </script>
-    <div id="instafeed"></div>
+    
 </asp:Content>
 
 
