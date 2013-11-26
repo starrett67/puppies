@@ -20,6 +20,6 @@ function search(val, container) {
         console.log(response);
         console.log(response.log);
         var videoID = response.items[0].id.videoId;
-        $('#' + container).html('<iframe width="420" height="315" src="//www.youtube.com/embed/' + videoID + '" frameborder="0" allowfullscreen></iframe>');
+        $('#' + container).html('<iframe width="200" height="200" src="//www.youtube.com/embed/' + videoID + '" frameborder="0" allowfullscreen></iframe>');
     });
 }
