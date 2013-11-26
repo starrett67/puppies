@@ -203,6 +203,14 @@
                     </table>
                 </div>
             </div>
+            <div class="row"><form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="drew@myskiprofile.com">
+<input type="hidden" name="item_name" value="Item Name">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="amount" value="<%OrderAmount%>">
+<input type="image" src="http://www.paypal.com/en_US/i/btn/x-click-but01.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+</form></div>
 </div>
 <div id="PaymentContainer" class="container" style="display: block">
     <PaymentControl:PaymentStart runat="server"></PaymentControl:PaymentStart>
