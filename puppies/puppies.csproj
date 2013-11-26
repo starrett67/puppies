@@ -120,7 +120,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Blog.aspx" />
     <Content Include="channel.html" />
     <Content Include="Checkout.aspx" />
     <Content Include="Content\bootstrap.css" />

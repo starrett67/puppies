@@ -36,7 +36,6 @@
                     <li><a href="Store.aspx">Store</a></li>
                     <li><a href="Checkout.aspx">Checkout</a></li>
                     <li><a href="Login.aspx">Login</a></li>
-                    <li><a href="Blog.aspx">Blog</a></li>
                     <li><a href="SuccessStories.aspx">Success Stories</a></li>
                 </ul>
             </div>
