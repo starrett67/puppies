@@ -10,6 +10,7 @@
     <div class="jumbotron hero-spacer">
         <h1>Your order FAILED</h1>    
     </div>
+    <a class="btn" href="Home.aspx">Go Back to Homepage</a>
     </form>
 </body>
 </html>
