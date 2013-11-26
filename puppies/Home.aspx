@@ -6,11 +6,11 @@
      <div class="row" style="height: 60px;">
         </div>
      <div class="row">
-     <div class="col-lg-10">
+<div class="col-lg-3 col-md-6 hero-feature">
   <div class="row"><left><a class="twitter-timeline" href="https://twitter.com/ASPCA" data-widget-id="405205603703734272">Tweets by @ASPCA</a>
 <script>    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } } (document, "script", "twitter-wjs");</script></ left>
      </div>
-      <div class="col-lg-10">
+ <div class="col-lg-3 col-md-6 hero-feature"
       <div class="jumbotron hero-spacer">
         <h1>Puppies R US!</h1>
         <p>We sell the best, Healthiest, and Friendliest Dogs around!  See Our most popular selections below</p>
