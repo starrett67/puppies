@@ -131,6 +131,7 @@
     <Content Include="MyAccount.aspx" />
     <Content Include="Payment.ascx" />
     <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\instafeed.min.js" />
     <Content Include="Scripts\YoutubeAuth.js" />
     <Content Include="Scripts\YoutubeSearch.js" />
     <Content Include="Store.aspx" />

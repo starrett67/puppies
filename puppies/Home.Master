@@ -12,6 +12,7 @@
     <style type="text/css">
         white{color: White;}
     </style>
+    <script src="Scripts/instafeed.min.js" type="text/javascript"></script>
 </head>
 <body>
     
