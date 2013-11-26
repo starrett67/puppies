@@ -129,6 +129,7 @@
     <Content Include="Scripts\YoutubeAuth.js" />
     <Content Include="Scripts\YoutubeSearch.js" />
     <Content Include="Store.aspx" />
+    <Content Include="SuccessStories.aspx" />
     <Content Include="ValidationFailed.aspx" />
     <Content Include="ValidationSuccess.aspx" />
     <Content Include="Web.config">
