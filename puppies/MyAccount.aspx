@@ -307,4 +307,11 @@
             </div>
         </div>
     </div>
+         <footer>
+        <div class="row">
+          <div class="col-lg-12">
+            <p>Copyright &copy; PuppiesRUS 2013 &middot;</p>
+          </div>
+        </div>
+      </footer>
 </asp:Content>

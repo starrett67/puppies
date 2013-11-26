@@ -85,5 +85,11 @@
             <fb:login-button show-faces="true" autologoutlink="true" scope="email" width="200" max-rows="1"></fb:login-button>
         </div>
     </div>
-              
+       <footer>
+        <div class="row">
+          <div class="col-lg-12">
+            <p>Copyright &copy; PuppiesRUS 2013 &middot;</p>
+          </div>
+        </div>
+      </footer>            
 </asp:Content>

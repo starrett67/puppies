@@ -23,6 +23,13 @@
         <h1>These puppies all went to good homes...will yours?</h1>
 
       </div>  <div id="instafeed"></div></div> </div>
+           <footer>
+        <div class="row">
+          <div class="col-lg-12">
+            <p>Copyright &copy; PuppiesRUS 2013 &middot;</p>
+          </div>
+        </div>
+      </footer>
 </asp:Content>
 
 
