@@ -15,7 +15,7 @@
             </div>
         </div>
     </div>
-      </div>
+      
       
       <hr>
       
@@ -25,7 +25,7 @@
         </div>
       </div><!-- /.row -->
       
-      <div class="row text-center">
+      <div class="row">
 
         <div class="col-lg-3 col-md-6 hero-feature">
           <div class="thumbnail">
