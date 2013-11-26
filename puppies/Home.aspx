@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="PuppyContent" runat="server">
     <div class="container">
-     <div class="row-fluid" style="height: 60px;">
+     <div class="row" style="height: 60px;">
         </div>
      <div class="row">
         
@@ -19,14 +19,10 @@
       
       <hr>
       
-      <div class="row">
-        <div class="col-lg-12">
-           <h3>Popular Dogs</h3>
-        </div>
-      </div><!-- /.row -->
       
-      <div class="row">
-
+      
+      <div class="row text-center">
+      <h3>Popular Dogs</h3>
         <div class="col-lg-3 col-md-6 hero-feature">
           <div class="thumbnail">
             <img src="http://farm5.staticflickr.com/4081/4883281674_8428f07e53_z.jpg" alt="">
