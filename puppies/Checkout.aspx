@@ -146,7 +146,7 @@
             document.getElementById("OrdersList").innerHTML += '</tbody>';
             document.getElementById("TableHolder").innerHTML += '<hr /> <table class="table table-striped"> <thread>';
             document.getElementById("TableHolder").innerHTML += '<tr> <th class="field-label col-xs-2 active"> <label id="total"> ' +
-                'Total: ' + total + '</label> </th> <th class="col-md-9"> </th> <th class="col-md-1"><form action="https://www.paypal.com/cgi-bin/webscr" method="post"><input type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business" value="drew@myskiprofile.com"><input type="hidden" name="item_name" value="Item Name"><input type="hidden" name="currency_code" value="USD"><input type="hidden" name="amount" value="'+total+'"><input type="image" src="http://www.paypal.com/en_US/i/btn/x-click-but01.gif" name="submit" alt="Make payments with PayPal - its fast, free and secure!"></form> <a href="' + showJavaScript + '" class="btn btn-primary">Purchase</a> ' +
+                'Total: ' + total + '</label> </th> <th class="col-md-9"> </th> <th class="col-md-1"><form action="https://www.paypal.com/cgi-bin/webscr" method="post"><input type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business" value="drew@myskiprofile.com"><input type="hidden" name="item_name" value="Item Name"><input type="hidden" name="currency_code" value="USD"><input type="hidden" name="amount" value="'+total+'"><input type="image" src="http://www.paypal.com/en_US/i/btn/x-click-but01.gif" name="submit" alt="Make payments with PayPal - its fast, free and secure!"></form> ' +
                 '</th> </tr> </thread> </table>';
 
             getAmount();
@@ -203,14 +203,7 @@
                     </table>
                 </div>
             </div>
-            <div class="row"><form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="business" value="drew@myskiprofile.com">
-<input type="hidden" name="item_name" value="Item Name">
-<input type="hidden" name="currency_code" value="USD">
-<input type="hidden" name="amount" value="50.00">
-<input type="image" src="http://www.paypal.com/en_US/i/btn/x-click-but01.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
-</form></div>
+            
 </div>
 <div id="PaymentContainer" class="container" style="display: block">
     <PaymentControl:PaymentStart runat="server"></PaymentControl:PaymentStart>
