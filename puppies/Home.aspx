@@ -7,8 +7,8 @@
         </div>
      <div class="row">
         <div class="col-lg-4 ">
-            <left><a class="twitter-timeline" href="https://twitter.com/ASPCA" data-widget-id="405205603703734272">Tweets by @ASPCA</a>
-            <script>    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } } (document, "script", "twitter-wjs");</script></ left>
+            <a class="twitter-timeline" href="https://twitter.com/ASPCA" data-widget-id="405205603703734272">Tweets by @ASPCA</a>
+            <script>    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } } (document, "script", "twitter-wjs");</script>
         </div>
         <div class="col-lg-8 "
             <div class="jumbotron hero-spacer">
