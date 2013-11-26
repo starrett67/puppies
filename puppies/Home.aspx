@@ -25,7 +25,7 @@
         </div>
       </div><!-- /.row -->
       
-      <div class="row-text-center">
+      <div class="row text-center">
 
         <div class="col-lg-3 col-md-6 hero-feature">
           <div class="thumbnail">
@@ -74,7 +74,7 @@
 
       </div><!-- /.row -->
       <hr>
-      <div><a class="twitter-timeline" href="https://twitter.com/ASPCA" data-widget-id="405205603703734272">Tweets by @ASPCA</a>
+      <div class="row"><a class="twitter-timeline" href="https://twitter.com/ASPCA" data-widget-id="405205603703734272">Tweets by @ASPCA</a>
             <script>                !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } } (document, "script", "twitter-wjs");</script>
         
   </div><!-- /.row -->
