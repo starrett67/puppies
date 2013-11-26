@@ -27,7 +27,7 @@
         </div>
       </div><!-- /.row -->
       
-      <div class="row-fluid">
+      <div class="row-text-center">
 
         <div class="col-lg-3 col-md-6 hero-feature">
           <div class="thumbnail">
@@ -81,7 +81,7 @@
       <hr>
 
       <footer>
-        <div class="row-fluid">
+        <div class="row">
           <div class="col-lg-12">
             <p>Copyright &copy; PuppiesRUS 2013 &middot;</p>
           </div>
