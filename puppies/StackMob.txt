@@ -1,0 +1,113 @@
+var publicKeyHeader = 'X-StackMob-API-Key-ae924762-6432-41d7-88ca-5f034661e46b';
+     var requestHeaders = {};
+     requestHeaders['Accept'] = 'application/vnd.stackmob+json; version=0';
+     requestHeaders[publicKeyHeader] = 1;
+     requestHeaders['Range'] = 'objects=0-20'; //set pagination to first 10
+
+     function buyPuppy(productId, price) {
+         var productsPurchase = [];
+         productsPurchase.push(productId);
+         price = parseFloat(price);
+         var purchased = false;
+         FB.api('/me', function (response) {
+             console.log(response);
+             var userId = parseInt(response.id);
+             var requestBody = { "amount": price, "products_purchased": productsPurchase, "user_id": userId, "purchased": purchased }
+             console.log(requestBody);
+             $.ajax({
+                 url: 'https://api.stackmob.com/orders',
+                 headers: requestHeaders,
+                 type: 'POST',
+                 data: JSON.stringify(requestBody),
+                 success: function (data) {
+                     console.log(data);
+                     document.getElementById("AddedToCart").innerHTML = "Item has been added to cart, view the checkout page to confirm your order";
+                 },
+                 error: function (error) {
+                     console.log(error)
+                 }
+
+             });
+         });     
+     }
+	 
+	 function fillOrdersTable() {
+        FB.api('/me', function (response) {
+            console.log('Good to see you, ' + response.name + '.');
+            console.log(response);
+            document.getElementById("OrdersHeader").innerHTML = response.name + " Orders: ";
+            var OrderNumbers = [];
+            var OrderDescription = [];
+            var OrderAmount = [];
+            $.ajax({
+                url: 'https://api.stackmob.com/orders',
+                headers: requestHeaders, //set the headers
+                type: 'GET',
+                async: false,
+                success: function (data, textStatus, xhr) {
+                    console.debug(data);
+                    var bFirstOrderFound = false;
+                    for (var i = 0; i < data.length; i++) {
+                        if (data[i].user_id == response.id && !data[i].purchased) {
+                            //User has an order
+                            OrderNumbers.push(data[i].orders_id);
+                            //ZOMG AJAX IN A AJAX
+                            $.ajax({
+                                url: 'https://api.stackmob.com/Products',
+                                headers: requestHeaders, //set the headers
+                                type: 'GET',
+                                async: false,
+                                success: function (resp, textStatus, xhr) {
+                                    //ZOMG A LOOP IN A LOOP
+                                    var productsOrdered = "";
+                                    for (var k = 0; k < resp.length; k++) {
+                                        //ZOMG A LOOP IN A LOOP IN A LOOP
+                                        for (var j = 0; j < data[i].products_purchased.length; j++) {
+                                            if (data[i].products_purchased[j] == resp[k].products_id) {
+                                                console.log("found a match");
+                                                if (productsOrdered != "") {
+                                                    productsOrdered += ", ";
+                                                }
+                                                productsOrdered += resp[k].Name + '[$' + resp[k].Price + ']';
+                                            }
+                                        }
+                                    }
+                                    OrderDescription.push(productsOrdered);
+                                },
+                                error: function (xhr, textStatus, error) {
+                                    console.log(error);
+                                }
+                            });
+                            OrderAmount.push(data[i].amount);
+                        }
+                    }
+                    //TODO: markup the products dynamicly by looping through returned object
+                    //and putting into the page as html
+                },
+                error: function (xhr, textStatus, error) {
+                    console.debug(error);
+                }
+            });
+            GlobalOrderIDs = OrderNumbers;
+            console.log(OrderNumbers);
+            console.log(OrderDescription);
+            console.log(OrderAmount);
+            var total = 0;
+            var showJavaScript = "Javascript:showPaymentInfo();"
+            document.getElementById("OrdersList").innerHTML += '<tbody>';
+            for (var i = 0; i < OrderNumbers.length; i++) {
+                total = Math.abs(total + OrderAmount[i]);
+                document.getElementById("OrdersList").innerHTML += '<tr> <td class="field-label col-xs-2 active"> <label> ' +
+                'Order Number: ' + OrderNumbers[i] + '</label> </td> <td class="col-md-9"> ' + OrderDescription[i] +
+                ' </td> <td class="col-md-1"> $' + OrderAmount[i] + ' </td> </tr>';
+            }
+            GlobalAmount = total;
+            document.getElementById("OrdersList").innerHTML += '</tbody>';
+            document.getElementById("TableHolder").innerHTML += '<hr /> <table class="table table-striped"> <thread>';
+            document.getElementById("TableHolder").innerHTML += '<tr> <th class="field-label col-xs-2 active"> <label id="total"> ' +
+                'Total: ' + total + '</label> </th> <th class="col-md-9"> </th> <th class="col-md-1"> <a href="' + showJavaScript + '" class="btn btn-primary">Purchase</a> ' +
+                '</th> </tr> </thread> </table>';
+
+            getAmount();
+        });
+    }
