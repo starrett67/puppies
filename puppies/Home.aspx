@@ -9,7 +9,7 @@
         
             
         <div class="col-lg-12"
-            <div class="jumbotron hero-spacer">
+            <div class="jumbotron hero-spacer well">
                 <h1>Puppies R US!</h1>
                 <p>We sell the best, Healthiest, and Friendliest Dogs around!  See Our most popular selections below</p>
             </div>
