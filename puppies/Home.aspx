@@ -10,7 +10,6 @@
       <div class="jumbotron hero-spacer">
         <h1>Puppies R US!</h1>
         <p>We sell the best, Healthiest, and Friendliest Dogs around!  See Our most popular selections below</p>
-        <p><a class="btn btn-primary btn-large">Call to action!</a></p>
       </div>
       </div>
       

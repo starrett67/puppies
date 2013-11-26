@@ -33,9 +33,8 @@
                     <li><a href="Checkout.aspx">Checkout</a></li>
                     <li><a href="Login.aspx">Login</a></li>
                     <li><a href="Blog.aspx">Blog</a></li>
+                    <li><a href="SuccessStories.aspx">Success Stories</a></li>
                 </ul>
-                <span class="glyphicon glyphicon-shopping-cart white" > </span>
-                <img src="http://americanyeti.com/wp-content/uploads/2013/11/glyphicons_202_shopping_cart_white.png" />
             </div>
             <!-- /.navbar-collapse -->
            
