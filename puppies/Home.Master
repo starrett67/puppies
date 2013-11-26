@@ -12,6 +12,7 @@
     <style type="text/css">
         white{color: White;}
     </style>
+    <script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
     <script src="Scripts/instafeed.min.js" type="text/javascript"></script>
     <script src="Scripts/jquery.tweet.js" type="text/javascript"></script>
     <script type='text/javascript'>
