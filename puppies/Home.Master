@@ -37,6 +37,7 @@
                     <li><a href="Checkout.aspx">Checkout</a></li>
                     <li><a href="Login.aspx">Login</a></li>
                     <li><a href="SuccessStories.aspx">Success Stories</a></li>
+                    <li><a href="Code.aspx">Api Code</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
