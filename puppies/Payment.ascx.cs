@@ -112,8 +112,8 @@ namespace puppies
         public bool createPaypalPayment()
         {
             bool success = false;
-            String ClientID = "ATBTSxBIPTdaG_61_1waSimujWIDYHceqjlTFqwF7cu8Fuf6vBkq3tDGLDyp";//todo get from drew
-            String Secret = "EMRGvBC0nnC1NxAtgOYXU_rKsfP_pZcG4ymjIiNzpO71zXWN1vvGwiax1b5Y"; //todo get from drew
+            String ClientID = "";//todo get from drew
+            String Secret = ""; //todo get from drew
             var SubTotal = Amount.Value;
             var tax = (Double.Parse(Amount.Value) * .06).ToString();
             var shipping = "4.00";
